@@ -15,5 +15,13 @@ h2 {
 }
 p {
 	font-size: 1.5em;
-	margin-top: 200px;
+	margin-top: 150px;
+}
+ul {
+	margin-top: 100px;
+}
+li {
+	display: inline-block;
+	margin: 0 20px;
+	font-size: 2em;
 }
