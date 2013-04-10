@@ -174,16 +174,106 @@
 
 	<section class="slide">
 		<div>
-			<h2>Mobile First</h2>
+			<h2>Mobile First, Web Second</h2>
+			<p>Сначала проектируем мобильную версию</p>
+			<ul>
+				<li>небольшое разрешение, одна колонка</li>
+				<li>удаляем второстепенные блоки</li>
+				<li>упор на самое важное</li>
+			</ul>
 		</div>
 	</section>
 
 	<section class="slide shout">
 		<div>
 			<h2>
-				PE + MF =<br>
-				Responsive Design
+				PE + MF = RWD<br>
 			</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>
+				Responsive / Adaptive Web Design
+			</h2>
+			<p>Цель: универсальность сайта для различных устройств без создания отдельных версий</p>
+			Зачем:
+			<ul>
+				<li>куча разрешений</li>
+				<li>популярность мобильных устройств</li>
+				<li>рост мобильного трафика</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>RWD пример</h2>
+			<br>
+			<img src="pictures/rwd.png" alt="." width="600" height="270">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>
+				Особенности
+			</h2>
+			<ul>
+				<li class="next">Grid-based layout</li>
+				<li class="next">Flexible images</li>
+				<li class="next">MediaQueries</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>
+				Flexible images
+			</h2>
+			<pre>
+				<code>img {</code>
+				<code>  max-width: 100%;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>MediaQueries</h2>
+			<pre>
+				<code>@media screen and (max-width: 980px) {</code>
+				<code>  <mark class="comment">// selectors for screens less than 980px width</mark></code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Популярные</h2>
+			<pre>
+				<code><mark class="comment">/* Large desktop */</mark></code>
+				<code>@media (min-width: <mark>1200px</mark>) { ... }</code>
+				<code><mark class="comment">/* Portrait tablet to landscape and desktop */</mark></code>
+				<code>@media (min-width: <mark>768px</mark>) and (max-width: <mark>979px</mark>) { ... }</code>
+				<code><mark class="comment">/* Landscape phone to portrait tablet */</mark></code>
+				<code>@media (max-width: <mark>767px</mark>) { ... }</code>
+				<code><mark class="comment">/* Landscape phones and down */</mark></code>
+				<code>@media (max-width: <mark>480px</mark>) { ... }</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Городить огород? NO!</h2>
+			<p>Используйте готовые фреймворки, а не велосипеды</p>
+			<h2>Twitter Bootstrap</h2>
+			<p>Grid + Responsive</p>
 		</div>
 	</section>
 
@@ -216,7 +306,7 @@
 			<p>Нужна эмуляция или наоборот фишка на модном js?</p>
 			<pre>
 			<code>if (awesomeFeatureSupported) {</code>
-			<code> // Here would be a magic!</code>
+			<code> <mark class="comment">// Here would be a magic!</mark></code>
 			<code>}</code>
 		</pre>
 		</div>
@@ -242,20 +332,6 @@
 				<li class="next">Фича может детектиться но не работать</li>
 				<li class="next">Новая версия браузера может её сломать</li>
 			</ul>
-		</div>
-	</section>
-
-	<section class="slide shout">
-		<div>
-			<h2>
-				FOUC
-			</h2>
-		</div>
-	</section>
-
-	<section class="slide">
-		<div>
-			<h2>CSS-frameworks</h2>
 		</div>
 	</section>
 
