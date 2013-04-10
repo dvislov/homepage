@@ -21,6 +21,11 @@
 		#Picture h2 {
 			color:#FFF;
 			}
+		textarea {
+			width: 100%;
+			height: 300px;
+			font-size: 24px;
+		}
 	</style>
 </head>
 <body class="list">
@@ -351,7 +356,22 @@
 	<section class="slide">
 		<div>
 			<h2>Совет#1 Emmet (ex ZenCoding)</h2>
-			<p>Сюда вставить textarea с возможностями Emmet и показать чувачкам жару</p>
+			<script src="scripts/emmet.min.js"></script>
+			<script>
+				emmet.require('textarea').setup({
+				    pretty_break: true, // enable formatted line breaks (when inserting 
+				                        // between opening and closing tag) 
+				    use_tab: false       // expand abbreviations by Tab key
+				});
+			</script>
+			<textarea name="" id="html" cols="30" rows="10" class="emmet-syntax-html"></textarea>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>То же CSS</h2>
+			<textarea name="" id="html" cols="30" rows="10" class="emmet-syntax-css"></textarea>
 		</div>
 	</section>
 
@@ -414,6 +434,18 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<div>
+			<h2>CSS-препроцессоры</h2>
+			<br>
+			<ul>
+				<li>Экономия времени</li>
+				<li>Принцип DRY в CSS</li>
+				<li>Делают код более читаемым</li>
+			</ul>
+		</div>
+	</section>
+	
 	<section class="slide">
 		<div>
 			<h2>CSS-препроцессоры</h2>
@@ -849,6 +881,7 @@
 		-->
 	<div class="progress"><div></div></div>
 	<script src="shower/shower.min.js"></script>
+	<script src="scripts/emmet.min.js"></script>
 	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
 	<!-- Photos by John Carey — fiftyfootshadows.net -->
 </body>
