@@ -430,6 +430,253 @@
 		</div>
 	</section>
 
+	<section class="slide">
+		<div>
+			<h2>Переменные</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>$blue: #3bbfce</code>
+							<code>&nbsp;</code>
+							<code>.border</code>
+							<code>  color: $blue</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.border {</code>
+							<code>  color: #3bbfce;</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Nesting</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>.content</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>	p</code>
+							<code>  	margin: 5px</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.content {</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>}</code>
+							<code>.content p {</code>
+							<code>	margin: 5px</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Nesting</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>.content</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>	&:hover</code>
+							<code>  	margin: 5px</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.content {</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>}</code>
+							<code>.content:hover {</code>
+							<code>	margin: 5px</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Nesting</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>.content</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>	&.active</code>
+							<code>  	margin: 5px</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.content {</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>}</code>
+							<code>.content.active {</code>
+							<code>	margin: 5px</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Nesting</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>.content</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>	.main &</code>
+							<code>  	margin: 5px</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.content {</code>
+							<code>	margin: 10px</code>
+							<code>	padding: 6px</code>
+							<code>}</code>
+							<code>.main .content {</code>
+							<code>	margin: 5px</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Colours</h2>
+			<pre>
+				<code>lighten($color, 50%)</code>
+				<code>darken($color, 50%)</code>
+				<code>saturate/desaturate($color, 50%)</code>
+				<code>grayscale($color)</code>
+				<code>invert($color)</code>
+				<code>mix($color1, $color2)</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Colours</h2>
+			<pre>
+				<code>.action</code>
+				<code>  color: darken($color, 50%)</code>
+				<code>&nbsp;</code>
+				<code>.backstage</code>
+				<code>  background-color: invert($color)</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Math</h2>
+			<pre>
+				<code>round</code>
+				<code>floor</code>
+				<code>min</code>
+				<code>max</code>
+				<code>abs</code>
+				<code>percentage</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Mixins</h2>
+			<table width="100%">
+				<tr>
+					<td>
+						<pre>
+							<code>@mixin setLeft($px)</code>
+							<code>  float: left</code>
+							<code>  margin-left: $px</code>
+							<code>&nbsp;</code>
+							<code>.selector</code>
+							<code>  +setLeft(10px)</code>
+						</pre>
+					</td>
+					<td>
+						<pre>
+							<code>.selector {</code>
+							<code>  float: left;</code>
+							<code>  margin-left: 10px;</code>
+							<code>}</code>
+						</pre>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Циклы</h2>
+				<pre>
+					<code>@for $i from 1 through $areas_count</code>
+					<code>  .event.area-#{$i}</code>
+					<code>    left: $area_width * $i</code>
+				</pre>
+				<p>@each, @while</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Условия</h2>
+			<pre>
+				<code>$boolean: true</code>
+				<code>&nbsp;</code>
+				<code>.selector</code>
+				<code>  @if $boolean</code>
+    		<code>    display: block</code>
+				<code>  @else</code>
+				<code>    display: none</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>COMPASS</h2>
+		</div>
+	</section>
+
 	<section class="slide"><div>
 		<h2>Front-End Trends</h2>
 		<p>Dmitry Vislov, undev</p>
