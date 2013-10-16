@@ -1,759 +1,821 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=792, user-scalable=no">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
-	<!--
-		To apply styles to the certain slides
-		set slide ID to get needed elements
-		-->
-	<style>
-		#Cover {
-			text-align: center;
-		}
-		#Cover h2 {
-			margin:65px 0 0;
-			text-align:center;
-			font-size:70px;
-			}
-		#Picture h2 {
-			color:#FFF;
-			}
-		textarea {
-			width: 100%;
-			height: 300px;
-			font-size: 24px;
-		}
-	</style>
+  <title>Shower Presentation Engine</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=792, user-scalable=no">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+  <!--
+    To apply styles to the certain slides
+    set slide ID to get needed elements
+    -->
+  <style>
+    #Cover {
+      text-align: center;
+    }
+    #Cover h2 {
+      margin:65px 0 0;
+      text-align:center;
+      font-size:70px;
+      }
+    #Picture h2 {
+      color:#FFF;
+      }
+    textarea {
+      width: 100%;
+      height: 300px;
+      font-size: 24px;
+    }
+  </style>
 </head>
 <body class="list">
-	<header class="caption">
-		<h1>Coursify. «Я наверстаю». Part 1.</h1>
-		<p><a href="http://vdv73.ru/">Дмитрий Вислов</a>, <a href="http://undev.ru">undev</a></p>
-	</header>
+  <header class="caption">
+    <h1>Coursify. «Я наверстаю». Part 1.</h1>
+    <p><a href="http://vdv73.ru/">Дмитрий Вислов</a>, <a href="http://undev.ru">undev</a></p>
+  </header>
 
-	<section class="slide" id="Cover">
-		<div>
-			<h2>Coursify<br>«Я наверстаю»<br>Part 1</h2>
-			<br>
-			<p>Дмитрий Вислов, undev</p>
-		</div>
-	</section>
+  <section class="slide" id="Cover">
+    <div>
+      <h2>Coursify<br>«Я наверстаю»<br>Part 1</h2>
+      <br>
+      <p>Дмитрий Вислов, undev</p>
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2><a href="http://coursify.ru">coursify.ru</a></h2>
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2><a href="http://coursify.ru">coursify.ru</a></h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2><br><br><br><br><a href="https://www.facebook.com/undevschool">https://www.facebook.com/undevschool</a></h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2><br><br><br><br><a href="https://www.facebook.com/undevschool">https://www.facebook.com/undevschool</a></h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Кроссбраузерная разработка</h2>
-				<p class="next">
-					Одинаковое отображение и функциональность
-				</p>
-				<blockquote>
-					Кнопка в ИЕ8 нескруглённая!<br>
-					У меня Опера и тут баг с ховером какой-то!<br>
-					Я открыл синюю букву e и ВСЁ СЛОМАЛОСЬ!
-				</blockquote>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>Кроссбраузерная разработка</h2>
+        <p>
+          Одинаковое отображение и функциональность
+        </p>
+        <ul>
+          <li class="next">IE 6, FF 2, Opera 8.5</li>
+          <li class="next">Win XP</li>
+          <li class="next">1024x768, 1280x1024, 800x600</li>
+        </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Как мы работаем?!</h2>
-				<ol>
-					<li>HTML / CSS / JS</li>
-					<li class="next">Ещё немножко HTML / CSS / JS</li>
-					<li class="next">Костыль для ИЕ8</li>
-					<li class="next">Костыль для ИЕ7</li>
-					<li class="next">Хак для Оперы</li>
-					<li class="next">десять костылей для ИЕ6</li>
-					<li class="next">фикс для FF 3.0.6</li>
-				</ol>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>И началось…</h2>
+        <blockquote>
+          Кнопка в ИЕ8 нескруглённая, а в ИЕ7 пиксель!<br>
+          У меня Опера на Mac и тут баг с ховером какой-то!<br>
+          Я открыла синюю букву e в ноутбуке, вошла в интернет и ВСЁ СЛОМАЛОСЬ!
+        </blockquote>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Должен<br>ли<br>сайт<br>показываться<br>одинаково<br>во<br>всех<br>браузерах?</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <img src="pictures/okay_face.png" alt="." height="400"><br>
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2>НЕТ</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>Как мы работаем?!</h2>
+        <ol>
+          <li>HTML / CSS / JS</li>
+          <li class="next">Ещё немножко HTML / CSS / JS</li>
+          <li class="next">Костыль для ИЕ8</li>
+          <li class="next">Костыль для ИЕ7</li>
+          <li class="next">Хак для Оперы</li>
+          <li class="next">десять костылей для ИЕ6</li>
+          <li class="next">фикс для FF 3.0.6</li>
+        </ol>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Вот телевизоры у всех разные</h2>
-				<br>
-				<img src="pictures/tv1.png" alt="." width="650" height="221"><br>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>ПИКСЕЛИ НЕ СОВПАДАЮТ!</h2>
+      <img src="pictures/spanch_1.jpg" alt="." height="360"><br>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Проблема:</h2>
-				<ul>
-					<li>Не в том, что во всех браузерах всё выглядит по-разному</li>
-					<li>В том, что мы не хотим принимать их и их возможности AS IS и стремимся всё запилить пиксель в пиксель</li>
-					<li>Не надо заставлять летать рождённого ползать</li>
-				</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>АХ ТЫ Ж ТВОЮ МАТЬ!</h2>
+      <img src="pictures/spanch_2.jpg" alt="." height="360"><br>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Значит</h2>
-			<ol>
-				<li>Пользователь должен получать контент в любом случае</li>
-				<li>Дизайн не должен ему в этом мешать</li>
-				<li>Реализация дизайна должна учитывать возможности конечного пользователя</li>
-			</ol>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>Должен<br>ли<br>сайт<br>показываться<br>одинаково<br>во<br>всех<br>браузерах?</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Ваш браузер устарел, скачайте новый!</h2>
-			<br>
-			<img src="pictures/tv3.png" alt="." width="650" height="221"><br>
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>НЕТ</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>В ТЗ есть ИЕ7?<br>Буду делать скругления картинками!</h2>
-			<br>
-			<img src="pictures/tv2.png" alt="." width="650" height="221"><br>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>Вот телевизоры у всех разные</h2>
+        <br>
+        <img src="pictures/tv1.png" alt="." width="650" height="221"><br>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Необходимо</h2>
-			<ul>
-				<li>Нет «развалов» вёрстки</li>
-				<li>Дизайн не претерпевает значительных изменений</li>
-				<li>Читабельность материалов сохраняется</li>
-				<li><s>попиксельное соответствие</s></li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+        <h2>Проблема:</h2>
+        <ul>
+          <li class="next">Не в том, что во всех браузерах всё выглядит по-разному</li>
+          <li class="next">В том, что мы не хотим принимать их и их возможности AS IS и стремимся всё запилить пиксель в пиксель</li>
+          <li class="next">Не надо заставлять летать рождённого ползать</li>
+        </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Побеждаем многообразие</h2>
-			<img src="pictures/real_web.jpg" alt="." width="650" height="393">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Значит</h2>
+      <ol>
+        <li class="next">Пользователь должен получать контент в любом случае</li>
+        <li class="next">Дизайн не должен ему в этом мешать</li>
+        <li class="next">Реализация дизайна должна учитывать возможности конечного пользователя</li>
+      </ol>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Graceful Degradation</h2>
-			<p>Пилим сайт для самого крутого браузера и проверяем на доступность в других</p>
-			<ul>
-				<li class="next">Работаем в Хроме</li>
-				<li class="next">Поправили фичу в FF</li>
-				<li class="next">Открыли ИЕ, нет белых букв на белом фоне etc. OK.</li>
-				<li class="next">Открыли в iPhone, вся информация доступна? ОК.</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Ваш браузер устарел, скачайте новый!</h2>
+      <br>
+      <img src="pictures/tv3.png" alt="." width="650" height="221"><br>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Progressive Enchancement</h2>
-			<p>Начинаем с содержимого и улучшаем если позволяют возможности</p>
-			<ul>
-				<li class="next">HTML</li>
-				<li class="next">простой CSS и простой JS</li>
-				<li class="next">крутой CSS и крутой JS</li>
-				<li class="next">офигенские селекторы CSS3, фичи HTML5 etc.</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>В ТЗ есть ИЕ7?<br>Буду делать скругления картинками!</h2>
+      <br>
+      <img src="pictures/tv2.png" alt="." width="650" height="221"><br>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Что же лучше?</h2>
-			<img src="pictures/pe.jpeg" alt="." width="650" height="424">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Необходимо</h2>
+      <ul>
+        <li class="next">Нет «развалов» вёрстки</li>
+        <li class="next">Дизайн не претерпевает значительных изменений</li>
+        <li class="next">Читабельность материалов сохраняется</li>
+        <li class="next"><s>попиксельное соответствие</s></li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Mobile First, Web Second</h2>
-			<p>Сначала проектируем мобильную версию</p>
-			<ul>
-				<li>небольшое разрешение, одна колонка</li>
-				<li>удаляем второстепенные блоки</li>
-				<li>упор на самое важное</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Побеждаем многообразие</h2>
+      <img src="pictures/real_web.jpg" alt="." width="650" height="393">
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2>
-				PE + MF = RWD<br>
-			</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Graceful Degradation</h2>
+      <p>Пилим сайт для самого крутого браузера и проверяем на доступность в других</p>
+      <ul>
+        <li class="next">Работаем в Хроме</li>
+        <li class="next">Поправили фичу в FF</li>
+        <li class="next">Открыли ИЕ, нет белых букв на белом фоне etc. OK.</li>
+        <li class="next">Открыли в iPhone, вся информация доступна? ОК.</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>
-				Responsive / Adaptive Web Design
-			</h2>
-			<p>Цель: универсальность сайта для различных устройств без создания отдельных версий</p>
-			Зачем:
-			<ul>
-				<li>куча разрешений</li>
-				<li>популярность мобильных устройств</li>
-				<li>рост мобильного трафика</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Progressive Enchancement</h2>
+      <p>Начинаем с содержимого и улучшаем если позволяют возможности</p>
+      <ul>
+        <li class="next">HTML</li>
+        <li class="next">простой CSS и простой JS</li>
+        <li class="next">крутой CSS и крутой JS</li>
+        <li class="next">офигенские селекторы CSS3, фичи HTML5 etc.</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>RWD пример</h2>
-			<br>
-			<img src="pictures/rwd.png" alt="." width="600" height="270">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Что же лучше?</h2>
+      <img src="pictures/pe.jpeg" alt="." width="650" height="424">
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>
-				Особенности
-			</h2>
-			<ul>
-				<li class="next">Grid-based layout</li>
-				<li class="next">Flexible images</li>
-				<li class="next">MediaQueries</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Mobile First, Web Second</h2>
+      <p>Сначала проектируем мобильную версию</p>
+      <ul>
+        <li>небольшое разрешение, одна колонка</li>
+        <li>удаляем второстепенные блоки</li>
+        <li>упор на самое важное</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>
-				Flexible images
-			</h2>
-			<pre>
-				<code>img {</code>
-				<code>  max-width: 100%;</code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>
+        PE + MF = RWD<br>
+      </h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>MediaQueries</h2>
-			<pre>
-				<code>@media screen and (max-width: 980px) {</code>
-				<code>  <mark class="comment">// selectors for screens less than 980px width</mark></code>
-				<code>}</code>
-			</pre>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>
+        Responsive / Adaptive Web Design
+      </h2>
+      <p>Цель: универсальность сайта для различных устройств без создания отдельных версий</p>
+      Зачем:
+      <ul>
+        <li>куча разрешений</li>
+        <li>популярность мобильных устройств</li>
+        <li>рост мобильного трафика</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Популярные</h2>
-			<pre>
-				<code><mark class="comment">/* Large desktop */</mark></code>
-				<code>@media (min-width: <mark>1200px</mark>) { ... }</code>
-				<code><mark class="comment">/* Portrait tablet to landscape and desktop */</mark></code>
-				<code>@media (min-width: <mark>768px</mark>) and (max-width: <mark>979px</mark>) { ... }</code>
-				<code><mark class="comment">/* Landscape phone to portrait tablet */</mark></code>
-				<code>@media (max-width: <mark>767px</mark>) { ... }</code>
-				<code><mark class="comment">/* Landscape phones and down */</mark></code>
-				<code>@media (max-width: <mark>480px</mark>) { ... }</code>
-			</pre>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>RWD пример</h2>
+      <br>
+      <img src="pictures/rwd.png" alt="." width="600" height="270">
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Media features</h2>
-			<ul>
-				<li>device-width / device-height</li>
-				<li>orientation</li>
-				<li>device-aspect-ratio</li>
-				<li>monochrome</li>
-				<li>resolution</li>
-				<li>etc.</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Жизнь</h2>
+      <table>
+        <tr>
+          <td><img src="pictures/rwd_stachka_1.png" alt="." height="360"></td>
+          <td><img src="pictures/rwd_stachka_2.png" alt="." height="360"></td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Городить огород? NO!</h2>
-			<p>Используйте готовые фреймворки, а не велосипеды</p>
-			<h2>Twitter Bootstrap</h2>
-			<p>Grid + Responsive</p>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>
+        Особенности
+      </h2>
+      <ul>
+        <li class="next">Grid-based layout</li>
+        <li class="next">Flexible images</li>
+        <li class="next">MediaQueries</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Feature Detection</h2>
-			<p>Определение возможностей браузера</p>
-			<ul>
-				<li class="next">Parse User-Agent</li>
-				<li class="next">Call methods</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>
+        Flexible images
+      </h2>
+      <pre>
+        <code>img {</code>
+        <code>  max-width: 100%;</code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>True way</h2>
-			<ul>
-				<li class="next">NO Regular Expression</li>
-				<li class="next">Фича появилась в браузере – И ЧО?</li>
-				<li class="next">Китайский неопознанный браузер – И ЧО?</li>
-				<li class="next">Подменили User-Agent – И ЧО?</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>MediaQueries</h2>
+      <pre>
+        <code>@media screen and (max-width: 980px) {</code>
+        <code>  <mark class="comment">// selectors for screens less than 980px width</mark></code>
+        <code>}</code>
+      </pre>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Делаем фишку на модной технологии</h2>
-			<p>Нужна эмуляция или наоборот фишка на модном js?</p>
-			<pre>
-			<code>if (awesomeFeatureSupported) {</code>
-			<code> <mark class="comment">// Here would be a magic!</mark></code>
-			<code>}</code>
-		</pre>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Популярные</h2>
+      <pre>
+        <code><mark class="comment">/* Large desktop */</mark></code>
+        <code>@media (min-width: <mark>1200px</mark>) { ... }</code>
+        <code><mark class="comment">/* Portrait tablet to landscape and desktop */</mark></code>
+        <code>@media (min-width: <mark>768px</mark>) and (max-width: <mark>979px</mark>) { ... }</code>
+        <code><mark class="comment">/* Landscape phone to portrait tablet */</mark></code>
+        <code>@media (max-width: <mark>767px</mark>) { ... }</code>
+        <code><mark class="comment">/* Landscape phones and down */</mark></code>
+        <code>@media (max-width: <mark>480px</mark>) { ... }</code>
+      </pre>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Modernizr</h2>
-			<p><a href="http://modernizr.com/">http://modernizr.com/</a></p>
-			<ul>
-				<li>touch</li>
-				<li>csstransitions</li>
-				<li>draganddrop</li>
-				<li>etc.</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Media features</h2>
+      <ul>
+        <li>device-width / device-height</li>
+        <li>orientation</li>
+        <li>device-aspect-ratio</li>
+        <li>monochrome</li>
+        <li>resolution</li>
+        <li>etc.</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>ОПАСНОСТЕ!</h2>
-			<ul>
-				<li class="next">Фича может детектиться но не работать</li>
-				<li class="next">Новая версия браузера может её сломать</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Плюсы</h2>
+      <ul>
+        <li>Одна версия сайта (шаблоны, контроллеры)</li>
+        <li>Преемственность интерфейса</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2>CSS frameworks</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Минусы</h2>
+      <ul>
+        <li>Одна версия сайта (куча условий в шаблонах, контроллерах)</li>
+        <li>Компромисс интерфейса</li>
+        <li>Думать сразу обо всём</li>
+        <li>Лишний трафик</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Википедия</h2>
-			<p>фреймворк, созданный для</p>
-				<ul>
-					<li>упрощения работы,</li>
-					<li>быстроты разработки</li>
-					<li>и исключения максимально возможного числа ошибок вёрстки.</li>
-				</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Feature Detection</h2>
+      <p>Определение возможностей браузера</p>
+      <ul>
+        <li class="next">Parse User-Agent</li>
+        <li class="next">Call methods</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Зачем люди пишут фреймворки?</h2>
-			<ul>
-				<li class="next">делятся опытом, готовыми методиками и решениями</li>
-			</ul>
-			<h2>Почему люди используют фреймворки?</h2>
-			<ul>
-				<li class="next">Потому что кнопки Ctrl + C и Ctrl + V расположены рядом</li>
-				<li class="next">Дешевле использовать чужой опыт, чем ждать, пока накопится свой</li>
-				<li class="next">Тупо лень</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>True way</h2>
+      <ul>
+        <li class="next">NO Regular Expression</li>
+        <li class="next">Фича появилась в браузере – OMGnobodycares!!</li>
+        <li class="next">Китайский неопознанный браузер – OMGnobodycares!!</li>
+        <li class="next">Подменили User-Agent – OMGnobodycares!!</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Плюсы</h2>
-			<ul>
-				<li class="next">Быстрый старт</li>
-				<li class="next">Относительная надёжность</li>
-				<li class="next">Низкий порог вхождения</li>
-				<li class="next">Единообразие кода</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Делаем фишку на модной технологии</h2>
+      <p>Нужна эмуляция или наоборот фишка на модном js?</p>
+      <pre>
+      <code>if (awesomeFeatureSupported) {</code>
+      <code> <mark class="comment">// Here would be a magic!</mark></code>
+      <code>}</code>
+    </pre>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Минусы</h2>
-			<ul>
-				<li class="next">не трогать исходники</li>
-				<li class="next">опасность обновления</li>
-				<li class="next">сомнительный код</li>
-				<li class="next">время на изучение</li>
-				<li class="next">лишний код</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Modernizr</h2>
+      <p><a href="http://modernizr.com/">http://modernizr.com/</a></p>
+      <ul>
+        <li>touch</li>
+        <li>csstransitions</li>
+        <li>draganddrop</li>
+        <li>etc.</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2>Как и какой выбрать?</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>ОПАСНОСТЕ!</h2>
+      <ul>
+        <li class="next">Фича может детектиться но не работать</li>
+        <li class="next">Новая версия браузера может её сломать</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Никак</h2>
-			<h2>Никакой</h2>
-			<h2>Включайте мозг</h2>
-			<h2>Свой мозг</h2>
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>Перерыв<br>5-10 мин</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<br>
-			<br>
-			<br>
-			<h2>Лучший фреймворк — ваш фреймворк *</h2>
-			<small style="font-size: 12px;">* возможно</small><br>
-			<small style="font-size: 12px;">* Twitter Bootstrap наше всё =)</small>
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>CSS frameworks</h2>
+    </div>
+  </section>
 
-	<section class="slide shout">
-		<div>
-			<h2>Retina</h2>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Википедия</h2>
+      <p>фреймворк, созданный для</p>
+        <ul>
+          <li>упрощения работы,</li>
+          <li>быстроты разработки</li>
+          <li>и исключения максимально возможного числа ошибок вёрстки.</li>
+        </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<img src="pictures/tina-retina.jpg" alt="" height="400">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Зачем люди пишут фреймворки?</h2>
+      <ul>
+        <li class="next">делятся опытом, готовыми методиками и решениями</li>
+      </ul>
+      <h2>Почему люди используют фреймворки?</h2>
+      <ul>
+        <li class="next">Потому что кнопки Ctrl + C и Ctrl + V расположены рядом</li>
+        <li class="next">Дешевле использовать чужой опыт, чем ждать, пока накопится свой</li>
+        <li class="next">Тупо лень</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Физические пикселы</h2>
-			<img src="pictures/retina_1.png" alt="" height="400">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Плюсы</h2>
+      <ul>
+        <li class="next">Быстрый старт</li>
+        <li class="next">Относительная надёжность</li>
+        <li class="next">Низкий порог вхождения</li>
+        <li class="next">Единообразие кода</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Плотность пикселей</h2>
-			<ul>
-				<li>Pixels Per Inch (PPI)</li>
-				<li>Человеческий глаз: <code><mark>300 ppi</mark></code></li>
-				<li>iPhone 4/4S: <code><mark>330</mark></code></li>
-				<li>iPhone 5/5C/5S: <code><mark>326</mark></code></li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Минусы</h2>
+      <ul>
+        <li class="next">не трогать исходники</li>
+        <li class="next">опасность обновления</li>
+        <li class="next">сомнительный код</li>
+        <li class="next">время на изучение</li>
+        <li class="next">лишний код</li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>CSS-Pixels</h2>
-			<img src="pictures/retina_2.png" alt="" height="340">
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>Как и какой выбрать?</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<img src="pictures/retina_3.png" alt="" height="400">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Никак</h2>
+      <h2>Никакой</h2>
+      <h2>Включайте мозг</h2>
+      <h2>Свой мозг</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Растровые пиксели</h2>
-			<img src="pictures/retina_4.png" alt="" height="400">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <br>
+      <br>
+      <br>
+      <h2>Лучший фреймворк — ваш фреймворк *</h2>
+      <small style="font-size: 12px;">* возможно</small><br>
+      <small style="font-size: 12px;">* Twitter Bootstrap наше всё =)</small>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<img src="pictures/retina_5.png" alt="" height="400">
-		</div>
-	</section>
+  <section class="slide shout">
+    <div>
+      <h2>Retina</h2>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<br>
-			<br>
-			<img src="pictures/retina_6.png" alt="" width="100%">
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <img src="pictures/tina-retina.jpg" alt="" height="400">
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-			<h2>Решения</h2>
-			<ul>
-				<li class="next">image@2x + background-size</li>
-				<li class="next">device-pixel-ratio + window.devicePixelRatio</li>
-				<li class="next">SVG</li>
-				<li class="next">icon-fonts</li>
-			</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>Физические пикселы</h2>
+      <img src="pictures/retina_1.png" alt="" height="400">
+    </div>
+  </section>
 
-	<section class="slide shout"><div>
-		<h2>Ctrl + P</h2>
-	</div></section>
+  <section class="slide">
+    <div>
+      <h2>Плотность пикселей</h2>
+      <ul>
+        <li>Pixels Per Inch (PPI)</li>
+        <li>Человеческий глаз: <code><mark>300 ppi</mark></code></li>
+        <li>iPhone 4/4S: <code><mark>330</mark></code></li>
+        <li>iPhone 5/5C/5S: <code><mark>326</mark></code></li>
+      </ul>
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Проблемы</h2>
-				<ul>
-					<li class="next">На листе бумаги нельзя кликнуть</li>
-					<li class="next">Принтер не цветной</li>
-					<li class="next">Хочу писать заметки на полях!</li>
-					<li class="next">Киллер-фича: QR</li>
-				</ul>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <h2>CSS-Pixels</h2>
+      <img src="pictures/retina_2.png" alt="" height="340">
+    </div>
+  </section>
 
-	<section class="slide shout"><div>
-		<h2>Почта</h2>
-	</div></section>
+  <section class="slide">
+    <div>
+      <img src="pictures/retina_3.png" alt="" height="400">
+    </div>
+  </section>
 
-	<section class="slide"><div>
-		<h2>АДЪ</h2>
-		<img src="pictures/Russian_Post_logo.jpg" alt="">
-	</div></section>
+  <section class="slide">
+    <div>
+      <h2>Растровые пиксели</h2>
+      <img src="pictures/retina_4.png" alt="" height="400">
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Почему всё так?</h2>
-				<ol>
-					<li>Картинки по запросу</li>
-					<li class="next">Софт : Outlook, The Bat, Opera Mail, GMail App</li>
-					<li class="next">Сервисы : Gmail, Mail.ru, Yandex</li>
-				</ol>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <img src="pictures/retina_5.png" alt="" height="400">
+    </div>
+  </section>
 
-	<section class="slide">
-		<div>
-				<h2>Чо будем делать-то тогда?</h2>
-				<ol>
-					<li>HTML 3.2 or xHTML 1.1</li>
-					<li class="next">Таблицы</li>
-					<li class="next">Отсутствие картинок и фонов (alt & GD)</li>
-					<li class="next">Жёсткие размеры</li>
-					<li class="next"><a href="http://www.campaignmonitor.com/css/">http://www.campaignmonitor.com/css/</a></li>
-					<li class="next"><a href="http://htmlemailboilerplate.com/">http://htmlemailboilerplate.com/</a></li>
-				</ol>
-		</div>
-	</section>
+  <section class="slide">
+    <div>
+      <br>
+      <br>
+      <img src="pictures/retina_6.png" alt="" width="100%">
+    </div>
+  </section>
 
-	<section class="slide"><div>
-		<h2>Coursify. «Я наверстаю». Part 1.</h2>
-		<p>Dmitry Vislov, undev</p>
-		<ul>
-			<li><a href="http://vdv73.ru">vdv73.ru</a></li>
-			<li><a href="http://twitter.com/vdv73rus">twitter.com/vdv73rus</a></li>
-			<li><a href="mailto:vdv73rus@gmail.com">vdv73rus@gmail.com</a></li>
-		</ul>
-	</div></section>
+  <section class="slide">
+    <div>
+      <h2>Решения</h2>
+      <ul>
+        <li class="next">image@2x + background-size</li>
+        <li class="next">device-pixel-ratio + window.devicePixelRatio</li>
+        <li class="next">SVG</li>
+        <li class="next">icon-fonts</li>
+      </ul>
+    </div>
+  </section>
 
-	<!--section class="slide cover" id="Cover"><div>
-		<h2>Shower Presentation Engine</h2>
-		<img src="pictures/cover.jpg" alt="">
-	</div></section>
-	<section class="slide"><div>
-		<h2>Shower key features</h2>
-		<ol>
-			<li>Built on HTML, CSS and vanilla JavaScript</li>
-			<li>All modern browsers are supported</li>
-			<li>Slide themes are separated from engine</li>
-			<li>Fully keyboard accessible</li>
-			<li>Printable to PDF</li>
-		</ol>
-		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Plain text on your slides</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>All kind of lists</h2>
-		<ol>
-			<li>Simple lists are marked with bullets.</li>
-			<li>Ordered lists begin with a number.</li>
-			<li>You can even nest lists one inside another.
-				<ul>
-					<li>Or mix their types.</li>
-					<li>But do not go too far.</li>
-					<li>Otherwise audience will be bored.</li>
-				</ul>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ol>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Serious Citations</h2>
-		<figure>
-			<blockquote>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-			</blockquote>
-			<figcaption>Marcus Tullius Cicero</figcaption>
-		</figure>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Code Samples</h2>
-		<pre>
-			<code>&lt;!DOCTYPE html&gt;</code>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>Pictures</h2>
-		<img src="pictures/picture.jpg" alt="">
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can even shout this way</h2>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner Navigation</h2>
-		<ol>
-			<li>Lets you reveal list items one by one</li>
-			<li class="next">To keep some key points</li>
-			<li class="next">In secret from audience</li>
-			<li class="next">But it will work only once</li>
-			<li class="next">Nobody wants to see the same joke twice</li>
-		</ol>
-	</div></section>
-	<section class="slide" data-timing="00:05"><div>
-		<h2>Slide with timer</h2>
-		<p>It will change right in five seconds</p>
-		<footer>
-			Presenter note for the first slide
-		</footer>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Heading</h2>
-		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
-		<footer>
-			Presenter note for the second slide
-		</footer>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Two rows.<br> Mighty heading</h2>
-		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
-		<p class="note">This paragraph could be used as a footnote</p>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Various lists</h2>
-		<ul>
-			<li>Simple lists are marked with bullets.</li>
-			<li>Ordered lists begin with a number.</li>
-			<li>You can even nest lists one inside another.
-				<ol>
-					<li>Or mix their types.</li>
-					<li>But do not go too far.</li>
-					<li>Otherwise audience will be bored.</li>
-				</ol>
-			</li>
-			<li>Look, seven rows exactly!</li>
-		</ul>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Serious citation</h2>
-		<figure>
-			<blockquote>
-				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
-			</blockquote>
-			<figcaption>Vadim Makeev</figcaption>
-		</figure>
-	</div></section>
-	<section class="slide"><div>
-		<h2>When you have a lot of code</h2>
-		<pre>
-			<code>&lt;html lang="en"&gt;</code>
-			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
-			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
-			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
-			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
-			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
-			<code><mark>&lt;/head&gt;</mark></code>
-		</pre>
-	</div></section>
-	<section class="slide"><div>
-		<h2>Code in separate blocks</h2>
-		<pre>
-			<code><mark>&lt;html</mark> lang="en"&gt;</code>
-		</pre>
-		<p class="note">Now you can add a note for each block</p>
-		<pre>
-			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
-		</pre>
-		<p class="note">And explain what is interesting about it</p>
-	</div></section>
-	<section class="slide shout"><div>
-		<h2>You can shout<br> this way</h2>
-	</div></section>
-	<section class="slide cover" id="Picture"><div>
-		<h2>And place any picture</h2>
-		<img src="pictures/picture.jpg" alt="">
-	</div></section>
-	<section class="slide"><div>
-		<h2>Inner navigation</h2>
-		<ol>
-			<li>Lets you change objects one by one</li>
-			<li class="next">For example, show list items</li>
-			<li class="next">Or switch pictures</li>
-			<li class="next">And much more</li>
-			<li class="next">But it will work only once</li>
-		</ol>
-	</div></section> -->
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"><div></div></div>
-	<script src="shower/shower.min.js"></script>
-	<script src="scripts/emmet.min.js"></script>
-	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
-	<!-- Photos by John Carey — fiftyfootshadows.net -->
+  <section class="slide shout"><div>
+    <h2>Ctrl + P</h2>
+  </div></section>
+
+  <section class="slide">
+    <div>
+        <h2>Проблемы</h2>
+        <ul>
+          <li class="next">На листе бумаги нельзя кликнуть</li>
+          <li class="next">Принтер не цветной</li>
+          <li class="next">Хочу писать заметки на полях!</li>
+          <li class="next">Киллер-фича: QR</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="slide shout"><div>
+    <h2>Почта</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>АДЪ</h2>
+    <img src="pictures/Russian_Post_logo.jpg" alt="">
+  </div></section>
+
+  <section class="slide">
+    <div>
+        <h2>Почему всё так?</h2>
+        <ol>
+          <li>Картинки по запросу</li>
+          <li class="next">Софт : Outlook, The Bat, Opera Mail, GMail App</li>
+          <li class="next">Сервисы : Gmail, Mail.ru, Yandex</li>
+        </ol>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+        <h2>Чо будем делать-то тогда?</h2>
+        <ol>
+          <li>HTML 3.2 or xHTML 1.1</li>
+          <li class="next">Таблицы</li>
+          <li class="next">Отсутствие картинок и фонов (alt & GD)</li>
+          <li class="next">Жёсткие размеры</li>
+          <li class="next"><a href="http://www.campaignmonitor.com/css/">http://www.campaignmonitor.com/css/</a></li>
+          <li class="next"><a href="http://htmlemailboilerplate.com/">http://htmlemailboilerplate.com/</a></li>
+        </ol>
+    </div>
+  </section>
+
+  <section class="slide"><div>
+    <h2>Coursify. «Я наверстаю». Part 1.</h2>
+    <p>Dmitry Vislov, undev</p>
+    <ul>
+      <li><a href="http://vdv73.ru">vdv73.ru</a></li>
+      <li><a href="http://twitter.com/vdv73rus">twitter.com/vdv73rus</a></li>
+      <li><a href="mailto:vdv73rus@gmail.com">vdv73rus@gmail.com</a></li>
+    </ul>
+  </div></section>
+
+  <!--section class="slide cover" id="Cover"><div>
+    <h2>Shower Presentation Engine</h2>
+    <img src="pictures/cover.jpg" alt="">
+  </div></section>
+  <section class="slide"><div>
+    <h2>Shower key features</h2>
+    <ol>
+      <li>Built on HTML, CSS and vanilla JavaScript</li>
+      <li>All modern browsers are supported</li>
+      <li>Slide themes are separated from engine</li>
+      <li>Fully keyboard accessible</li>
+      <li>Printable to PDF</li>
+    </ol>
+    <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Plain text on your slides</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+  </div></section>
+  <section class="slide"><div>
+    <h2>All kind of lists</h2>
+    <ol>
+      <li>Simple lists are marked with bullets.</li>
+      <li>Ordered lists begin with a number.</li>
+      <li>You can even nest lists one inside another.
+        <ul>
+          <li>Or mix their types.</li>
+          <li>But do not go too far.</li>
+          <li>Otherwise audience will be bored.</li>
+        </ul>
+      </li>
+      <li>Look, seven rows exactly!</li>
+    </ol>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Serious Citations</h2>
+    <figure>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+      </blockquote>
+      <figcaption>Marcus Tullius Cicero</figcaption>
+    </figure>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Code Samples</h2>
+    <pre>
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <code>&lt;html lang="en"&gt;</code>
+      <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+      <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+      <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+      <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+      <code><mark>&lt;/head&gt;</mark></code>
+    </pre>
+  </div></section>
+  <section class="slide cover" id="Picture"><div>
+    <h2>Pictures</h2>
+    <img src="pictures/picture.jpg" alt="">
+  </div></section>
+  <section class="slide shout"><div>
+    <h2>You can even shout this way</h2>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Inner Navigation</h2>
+    <ol>
+      <li>Lets you reveal list items one by one</li>
+      <li class="next">To keep some key points</li>
+      <li class="next">In secret from audience</li>
+      <li class="next">But it will work only once</li>
+      <li class="next">Nobody wants to see the same joke twice</li>
+    </ol>
+  </div></section>
+  <section class="slide" data-timing="00:05"><div>
+    <h2>Slide with timer</h2>
+    <p>It will change right in five seconds</p>
+    <footer>
+      Presenter note for the first slide
+    </footer>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Heading</h2>
+    <p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
+    <footer>
+      Presenter note for the second slide
+    </footer>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Two rows.<br> Mighty heading</h2>
+    <p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
+    <p class="note">This paragraph could be used as a footnote</p>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Various lists</h2>
+    <ul>
+      <li>Simple lists are marked with bullets.</li>
+      <li>Ordered lists begin with a number.</li>
+      <li>You can even nest lists one inside another.
+        <ol>
+          <li>Or mix their types.</li>
+          <li>But do not go too far.</li>
+          <li>Otherwise audience will be bored.</li>
+        </ol>
+      </li>
+      <li>Look, seven rows exactly!</li>
+    </ul>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Serious citation</h2>
+    <figure>
+      <blockquote>
+        <p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
+      </blockquote>
+      <figcaption>Vadim Makeev</figcaption>
+    </figure>
+  </div></section>
+  <section class="slide"><div>
+    <h2>When you have a lot of code</h2>
+    <pre>
+      <code>&lt;html lang="en"&gt;</code>
+      <code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+      <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+      <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+      <code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+      <code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+      <code><mark>&lt;/head&gt;</mark></code>
+    </pre>
+  </div></section>
+  <section class="slide"><div>
+    <h2>Code in separate blocks</h2>
+    <pre>
+      <code><mark>&lt;html</mark> lang="en"&gt;</code>
+    </pre>
+    <p class="note">Now you can add a note for each block</p>
+    <pre>
+      <code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
+    </pre>
+    <p class="note">And explain what is interesting about it</p>
+  </div></section>
+  <section class="slide shout"><div>
+    <h2>You can shout<br> this way</h2>
+  </div></section>
+  <section class="slide cover" id="Picture"><div>
+    <h2>And place any picture</h2>
+    <img src="pictures/picture.jpg" alt="">
+  </div></section>
+  <section class="slide"><div>
+    <h2>Inner navigation</h2>
+    <ol>
+      <li>Lets you change objects one by one</li>
+      <li class="next">For example, show list items</li>
+      <li class="next">Or switch pictures</li>
+      <li class="next">And much more</li>
+      <li class="next">But it will work only once</li>
+    </ol>
+  </div></section> -->
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="shower/shower.min.js"></script>
+  <script src="scripts/emmet.min.js"></script>
+  <!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+  <!-- Photos by John Carey — fiftyfootshadows.net -->
 </body>
 </html>
