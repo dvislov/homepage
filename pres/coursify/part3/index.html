@@ -1,0 +1,838 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Cover {
+			text-align: center;
+		}
+		#Cover h2 {
+			margin:65px 0 0;
+			text-align:center;
+			font-size:70px;
+			}
+		#Picture h2 {
+			color:#FFF;
+			}
+		textarea {
+			width: 100%;
+			height: 300px;
+			font-size: 24px;
+		}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+    <h1>Coursify. «Я наверстаю». Part 3.</h1>
+    <p><a href="http://vdv73.ru/">Дмитрий Вислов</a>, <a href="http://undev.ru">undev</a></p>
+  </header>
+
+	<section class="slide" id="Cover">
+    <div>
+      <h2>Coursify<br>«Я наверстаю»<br>Part 3</h2>
+      <br>
+      <p>Дмитрий Вислов, undev</p>
+    </div>
+  </section>
+
+	<section class="slide">
+		<div>
+			<h2>2 вопрсоса</h2>
+			<ul>
+				<li class="next">Как называть стили?</li>
+				<li class="next">Как их структурировать?</li>
+			</ul>
+		</div>
+	</section>
+
+  <section class="slide shout">
+		<div>
+			<h2>OOCSS</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>1. Разделение структуры и оформления</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<pre>
+			<code>.header {</code>
+			<code>&nbsp;&nbsp;background: #BADA55;</code>
+			<code>&nbsp;&nbsp;color: #000;</code>
+			<code>&nbsp;&nbsp;width: 960px;</code>
+			<code>&nbsp;&nbsp;margin: 0 auto;</code>
+			<code>}</code>
+			<code>.footer {</code>
+			<code>&nbsp;&nbsp;background: #BADA55;</code>
+			<code>&nbsp;&nbsp;text-align: center;</code>
+			<code>&nbsp;&nbsp;color: #000;</code>
+			<code>&nbsp;&nbsp;padding-top: 20px;</code>
+			<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<pre>
+			<code>.header {</code>
+			<code>&nbsp;&nbsp;<mark>background: #BADA55;</mark></code>
+			<code>&nbsp;&nbsp;<mark>color: #000;</mark></code>
+			<code>&nbsp;&nbsp;width: 960px;</code>
+			<code>&nbsp;&nbsp;margin: 0 auto;</code>
+			<code>}</code>
+			<code>.footer {</code>
+			<code>&nbsp;&nbsp;<mark>background: #BADA55;</mark></code>
+			<code>&nbsp;&nbsp;text-align: center;</code>
+			<code>&nbsp;&nbsp;<mark>color: #000;</mark></code>
+			<code>&nbsp;&nbsp;padding-top: 20px;</code>
+			<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<pre>
+				<code>.color-skin {</code>
+				<code>&nbsp;&nbsp;<mark>background: #BADA55;</mark></code>
+				<code>&nbsp;&nbsp;<mark>color: #000;</mark></code>
+				<code>}</code>
+				<code>&nbsp;</code>
+				<code>&lt;div class="header colors-skin"&gt; … &lt;/div&gt;</code>
+				<code>…</code>
+				<code>&lt;div class="footer colors-skin"&gt; … &lt;/div&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Какие плюсы</h2>
+			<ul>
+				<li class="next">Класс, который можно использовать несколько раз</li>
+				<li class="next">Если нужно изменение — в одном классе</li>
+				<li class="next">DRY & код меньше</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>2. Разделение контейнера и содержимого</h2>
+			<p>У каждого элемента один и тот же стиль вне зависимости от его расположения</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Плохо?</h2>
+			<pre>
+				<code>.header .social-widget {</code>
+				<code>&nbsp;&nbsp;<mark>width: 250px;</mark></code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>OOCSS</h2>
+			<ul>
+				<li class="next"><a href="https://github.com/stubbornella/oocss">https://github.com/stubbornella/oocss</a></li>
+				<li class="next"><a href="http://www.youtube.com/watch?v=GhX8iPcDSsI">http://www.youtube.com/watch?v=GhX8iPcDSsI</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>SMACSS</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>SMACSS</h2>
+			<ul>
+				<li class="next">Base</li>
+				<li class="next">Layout</li>
+				<li class="next">Module</li>
+				<li class="next">State</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Атомарный дизайн</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="http://frontender.info/starting-css/img/atomic-ru.jpg" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атомы</h2>
+			<pre>
+				<code>&lt;label&gt;Поиск по сайту&lt;/label&gt;</code>
+				<code>или</code>
+				<code>&lt;input type="text" placeholder="введите ключевое слово" /&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Молекула</h2>
+			<pre>
+				<code>&lt;form&gt;</code>
+				<code>&lt;label>Поиск по сайту&lt;/label&gt;</code>
+				<code>&lt;input type="text" placeholder="введите ключевое слово" /&gt;</code>
+				<code>&lt;input type="submit" value="Поиск" /&gt;</code>
+				<code>&lt;/form&gt;</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Химия</h2>
+			<ul>
+				<li class="next">Можно использовать те же атомы чтобы построить другую молекулу</li>
+				<li class="next">Молекула может зависеть от контекста</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Organic CSS</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<ul>
+				<li class="next">является наименьшей частицей вещества</li>
+				<li class="next"></li>
+				<li class="next">margin-top: 24px;</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>body {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+				<code>header {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>body, header {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code><mark>%margin-top-24</mark> {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+				<code>body {</code>
+				<code>&nbsp;&nbsp;@extend <mark>%margin-top-24</mark>;</code>
+				<code>}</code>
+				<code>header {</code>
+				<code>&nbsp;&nbsp;@extend <mark>%margin-top-24</mark>;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>@include define-atom("block") {</code>
+				<code>&nbsp;&nbsp;display: block;</code>
+				<code>}</code>
+				<code>@include define-atom("font-family") {</code>
+				<code>&nbsp;&nbsp;font-family: Georgia;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Молекула</h2>
+			<pre>
+				<code>@mixin header { // <- молекула 'header'</code>
+				<code>&nbsp;&nbsp;@include atoms((</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;block,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;clearfix,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;font-family</code>
+				<code>&nbsp;&nbsp;));</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Молекула</h2>
+			<pre>
+				<code>@mixin login-box {</code>
+				<code>&nbsp;&nbsp;@include atoms((</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;block,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;font-size-20,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;margin-top-23,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;bold</code>
+				<code>&nbsp;&nbsp;));</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Органелла</h2>
+			<pre>
+				<code>.login-form {</code>
+				<code>&nbsp;&nbsp;@include label;</code>
+				<code>&nbsp;&nbsp;@include input;</code>
+				<code>&nbsp;&nbsp;@include textarea;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Organic CSS</h2>
+			<ul>
+				<li class="next">Больше абстракций: Атом → Молекула → Органелла → Клетка → Ткань → Орган → Система → Организм</li>
+				<li class="next">Атомы и молекулы могут быть перенесены в другие проекты</li>
+				<li class="next">
+					<a href="https://github.com/krasimir/organic-css">https://github.com/krasimir/organic-css</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>БЭМ</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="http://img-fotki.yandex.ru/get/9347/221798411.0/0_babd8_4e505a88_XXL.png" alt="" width="800">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="http://img-fotki.yandex.ru/get/9258/221798411.0/0_babd7_c4c0b5d6_XXL.png" alt="" width="800">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Если у каждой части сайта есть название, этими терминами удобно пользоваться при общении внутри команды.</h2>
+			<ul>
+				<li>Хотелки менеджера</li>
+				<li>Изменения требований</li>
+				<li>Дальнейший support</li>
+				<li>Добавление, перемещение, изменение</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Блок</h2>
+			<ul>
+				<li>некая самостоятельная сущность</li>
+				<li>простые и составные (содержат в себе другие блоки)</li>
+			</ul>
+			<img src="http://img-fotki.yandex.ru/get/9316/221798411.0/0_babd5_c3d7b2b5_XL.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Элемент</h2>
+			<ul>
+				<li>часть блока, отвечающая за отдельную функцию.</li>
+				<li>может находиться только в составе блока и не имеет смысла в отрыве от него.</li>
+			</ul>
+			<img src="http://img-fotki.yandex.ru/get/9515/221798411.0/0_babd4_efd80a69_XXL.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+    <div>
+      <h2>Что нам надо описать?</h2>
+      <ul>
+      	<li class="next">Факт присутствия блоков</li>
+      	<li class="next">Порядок и расположение</li>
+      	<li class="next">Не забываем про вложенность блоков друг в друга</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Как-то так</h2>
+      <img src="http://img-fotki.yandex.ru/get/5008/221798411.0/0_babce_7deef28f_XXL.png" alt="" width="800">
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Имя блока и имя элемента</h2>
+			<ul>
+				<li class="next">Имя блока уникально</li>
+				<li class="next">Одинаковые имена только у одинаковых блоков</li>
+				<li class="next">Имя элемента уникально в пределах блока</li>
+				<li class="next">Одинаковых элементов в блоке может быть несколько</li>
+			</ul>
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+    	<pre>
+    		<code>block: 'head',</code>
+    		<code>content: [</code>
+    		<code>&nbsp;&nbsp;{</code>
+    		<code>&nbsp;&nbsp;&nbsp;&nbsp;block: 'search',</code>
+    		<code>&nbsp;&nbsp;&nbsp;&nbsp;content: [</code>
+    		<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ elem: 'input' },</code>
+    		<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ elem: 'button', content: 'Search' }</code>
+    		<code>&nbsp;&nbsp;&nbsp;&nbsp;]</code>
+    		<code>&nbsp;&nbsp;}</code>
+    		<code>]</code>
+    	</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>БЭМ-дерево</h2>
+			<ul>
+				<li>JSON + BEMHTML = HTML</li>
+			</ul>
+    </div>
+  </section>
+
+  <section class="slide shout">
+    <div>
+      <h2>Независимые блоки</h2>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+			<img src="http://img-fotki.yandex.ru/get/9110/221798411.0/0_babcf_819f07f2_XXL.png" alt="" width="800">
+			<img src="http://img-fotki.yandex.ru/get/9153/221798411.0/0_babcd_313420f0_XXL.png" alt="" width="800">
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+      <h2>Независимый блок реализован так, чтобы его можно было вставить в любое место на странице. В том числе и вставить в другой блок.</h2>
+      <ul>
+      	<li class="next">У блока (или элемента) должно быть уникальное «имя»</li>
+      	<li class="next">Не должно быть CSS-селекторов на теги (.menu td)</li>
+      	<li class="next">Нужно избегать каскадные селекторы (.header .menu)</li>
+      </ul>
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+      <h2>БЭМ-нотация</h2>
+      <pre>
+      	<code>&lt;ul class="menu"&gt;</code>
+      	<code>&nbsp;&nbsp;&lt;li class="menu__item"&gt;…&lt;/li&gt;</code>
+      	<code>&nbsp;&nbsp;&lt;li class="menu__item"&gt;…&lt;/li&gt;</code>
+      	<code>&lt;/ul&gt;</code>
+      </pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Повторяемость блоков</h2>
+      <ul>
+      	<li class="next">Может появиться второй блок</li>
+      	<li class="next">В любой момент может появиться второй такой же</li>
+      	<li class="next"></li>
+      	<li class="next">Нельзя id</li>
+      	<li class="next">Нельзя tags</li>
+      	<li class="next">Всё дерево покрываем классами (без фанатизма, чувство меры)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Модифицируемость</h2>
+			<img src="http://img-fotki.yandex.ru/get/9255/221798411.0/0_babd6_ec71b7f8_XXL.png" alt="" width="800">
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Модификатор</h2>
+			<p>это свойство блока или элемента, которое меняет внешний вид или поведение.</p>
+			<img src="http://img-fotki.yandex.ru/get/9325/221798411.0/0_babd2_7da50c7b_XL.png" alt="">
+			<img src="http://img-fotki.yandex.ru/get/9313/221798411.0/0_babd0_503ecad_L.png" alt="">
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Модификаторы в БЭМ-дереве</h2>
+			<pre>
+				<code>{</code>
+				<code>&nbsp;&nbsp;block: 'menu',</code>
+				<code>&nbsp;&nbsp;mods: [</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;{ size: 'big' },</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;{ type: 'buttons' }</code>
+				<code>&nbsp;&nbsp;]</code>
+				<code>}</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Модификаторы блока</h2>
+			<pre>
+				<code>&lt;ul class="menu <mark>menu_size_big</mark> <mark>menu_type_buttons</mark>"&gt;</code>
+				<code>&lt;/ul&gt;</code>
+				<code>&nbsp;</code>
+				<code>.menu_size_big {</code>
+				<code>&nbsp;&nbsp;// CSS code to specify height</code>
+				<code>}</code>
+				<code>.menu_type_buttons .menu__item {</code>
+				<code>&nbsp;&nbsp;// CSS code to change item's look</code>
+				<code>}</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Модификаторы элемента</h2>
+			<pre>
+				<code>&lt;ul class="menu"&gt;</code>
+				<code>&nbsp;&nbsp;&lt;li class="menu__item"&gt;Index&lt;/li&gt;</code>
+				<code>&nbsp;&nbsp;&lt;li class="menu__item <mark>menu__item_state_current</mark>"&gt;…&lt;/li&gt;</code>
+				<code>&nbsp;&nbsp;&lt;li class="menu__item"&gt;Contact&lt;/li&gt;</code>
+				<code>&lt;/ul&gt;</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Немного о CSS</h2>
+			<pre>
+				<code>.menu {</code>
+				<code>&nbsp;&nbsp;__item {</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;_state_current {</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;}</code>
+				<code>&nbsp;&nbsp;}</code>
+				<code>}</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Немного о JS</h2>
+			<pre>
+				<code>$('menu__item').click( … );</code>
+				<code>$('menu__item').addClass('menu__item_state_current');</code>
+				<code>$('menu').toggle('menu_size_big').toggle('menu_size_small');</code>
+				<br>
+				<code>block('menu').elem('item').click( … );</code>
+				<code>block('menu').elem('item').setMod('state', 'current');</code>
+				<code>block('menu').toggleMod('size', 'big', 'small');</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Консистентность блока</h2>
+			<ul>
+				<li class="next">Блок должен знать о себе всё</li>
+				<li class="next">Реализация блока подразумевает описание его внешнего вида и поведения во всех необходимых технологиях.</li>
+				<li class="next">Мультилингвальность</li>
+			</ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2>Мультилингвальность</h2>
+			<ul>
+				<ul>
+					<li class="next">шаблоны, превращающие декларацию блока на странице в HTML-код</li>
+					<li class="next">CSS, отвечающий за внешний вид блока</li>
+					<li class="next">JavaScript-реализация блока, если у блока также есть динамическое поведение</li>
+					<li class="next">Картинки, относящиеся к блоку</li>
+					<li class="next">Документация к блоку</li>
+				</ul>
+			</ul>
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+      <pre>
+      	<code>menu/</code>
+      	<code>&nbsp;&nbsp;__item/</code>
+      	<code>&nbsp;&nbsp;&nbsp;&nbsp;_state/</code>
+      	<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu__item_state_current.css</code>
+      	<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu__item_state_current.xsl</code>
+      	<code>&nbsp;&nbsp;&nbsp;&nbsp;menu__item.css</code>
+      	<code>&nbsp;&nbsp;&nbsp;&nbsp;menu__item.xsl</code>
+      	<code>&nbsp;&nbsp;menu.css</code>
+      	<code>&nbsp;&nbsp;menu.js</code>
+      	<code>&nbsp;&nbsp;menu.xsl</code>
+      </pre>
+    </div>
+  </section>
+
+	<section class="slide shout">
+    <div>
+      <h2>~ 0%</h2>
+    </div>
+  </section>
+
+  <section class="slide shout">
+    <div>
+      <h2><a href="http://coursify.ru">coursify.ru</a></h2>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+      <h2><br><br><br><br><a href="https://www.facebook.com/undevschool">https://www.facebook.com/undevschool</a></h2>
+    </div>
+  </section>
+
+	<section class="slide"><div>
+    <h2>Coursify. «Я наверстаю». Part 2.</h2>
+    <p>Dmitry Vislov, undev</p>
+    <ul>
+      <li><a href="http://vdv73rus.livejournal.com">vdv73rus.livejournal.com</a></li>
+      <li><a href="http://twitter.com/vdv73rus">twitter.com/vdv73rus</a></li>
+      <li><a href="mailto:vdv73rus@gmail.com">vdv73rus@gmail.com</a></li>
+    </ul>
+  </div></section>
+
+	<!--section class="slide cover" id="Cover"><div>
+		<h2>Shower Presentation Engine</h2>
+		<img src="pictures/cover.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower key features</h2>
+		<ol>
+			<li>Built on HTML, CSS and vanilla JavaScript</li>
+			<li>All modern browsers are supported</li>
+			<li>Slide themes are separated from engine</li>
+			<li>Fully keyboard accessible</li>
+			<li>Printable to PDF</li>
+		</ol>
+		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Plain text on your slides</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>All kind of lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ul>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious Citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code Samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>Pictures</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can even shout this way</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner Navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</div></section>
+	<section class="slide" data-timing="00:05"><div>
+		<h2>Slide with timer</h2>
+		<p>It will change right in five seconds</p>
+		<footer>
+			Presenter note for the first slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Heading</h2>
+		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
+		<footer>
+			Presenter note for the second slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Two rows.<br> Mighty heading</h2>
+		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
+		<p class="note">This paragraph could be used as a footnote</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Various lists</h2>
+		<ul>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ol>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ol>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious citation</h2>
+		<figure>
+			<blockquote>
+				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
+			</blockquote>
+			<figcaption>Vadim Makeev</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>When you have a lot of code</h2>
+		<pre>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code in separate blocks</h2>
+		<pre>
+			<code><mark>&lt;html</mark> lang="en"&gt;</code>
+		</pre>
+		<p class="note">Now you can add a note for each block</p>
+		<pre>
+			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
+		</pre>
+		<p class="note">And explain what is interesting about it</p>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can shout<br> this way</h2>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>And place any picture</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you change objects one by one</li>
+			<li class="next">For example, show list items</li>
+			<li class="next">Or switch pictures</li>
+			<li class="next">And much more</li>
+			<li class="next">But it will work only once</li>
+		</ol>
+	</div></section> -->
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<script src="scripts/emmet.min.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
