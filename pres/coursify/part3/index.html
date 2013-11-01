@@ -220,6 +220,136 @@
 		</div>
 	</section>
 
+	<section class="slide shout">
+		<div>
+			<h2>Organic CSS</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<ul>
+				<li class="next">является наименьшей частицей вещества</li>
+				<li class="next"></li>
+				<li class="next">margin-top: 24px;</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>body {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+				<code>header {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>body, header {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code><mark>%margin-top-24</mark> {</code>
+				<code>&nbsp;&nbsp;margin-top: 24px;</code>
+				<code>}</code>
+				<code>body {</code>
+				<code>&nbsp;&nbsp;@extend <mark>%margin-top-24</mark>;</code>
+				<code>}</code>
+				<code>header {</code>
+				<code>&nbsp;&nbsp;@extend <mark>%margin-top-24</mark>;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Атом</h2>
+			<pre>
+				<code>@include define-atom("block") {</code>
+				<code>&nbsp;&nbsp;display: block;</code>
+				<code>}</code>
+				<code>@include define-atom("font-family") {</code>
+				<code>&nbsp;&nbsp;font-family: Georgia;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Молекула</h2>
+			<pre>
+				<code>@mixin header { // <- молекула 'header'</code>
+				<code>&nbsp;&nbsp;@include atoms((</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;block,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;clearfix,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;font-family</code>
+				<code>&nbsp;&nbsp;));</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Молекула</h2>
+			<pre>
+				<code>@mixin login-box {</code>
+				<code>&nbsp;&nbsp;@include atoms((</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;block,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;font-size-20,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;margin-top-23,</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;bold</code>
+				<code>&nbsp;&nbsp;));</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Органелла</h2>
+			<pre>
+				<code>.login-form {</code>
+				<code>&nbsp;&nbsp;@include label;</code>
+				<code>&nbsp;&nbsp;@include input;</code>
+				<code>&nbsp;&nbsp;@include textarea;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Organic CSS</h2>
+			<ul>
+				<li class="next">Больше абстракций: Атом → Молекула → Органелла → Клетка → Ткань → Орган → Система → Организм</li>
+				<li class="next">Атомы и молекулы могут быть перенесены в другие проекты</li>
+				<li class="next">
+					<a href="https://github.com/krasimir/organic-css">https://github.com/krasimir/organic-css</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
   <section class="slide shout">
     <div>
       <h2><a href="http://coursify.ru">coursify.ru</a></h2>
