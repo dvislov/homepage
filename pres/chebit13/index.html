@@ -10,22 +10,21 @@
 		set slide ID to get needed elements
 		-->
 	<style>
-		#Cover {
+		#Cover, .discover {
 			text-align: center;
 		}
-		#Cover h2 {
+		#Cover h2, .discover h2 {
 			margin:65px 0 0;
 			text-align:center;
 			font-size:70px;
 			}
-		#Picture h2 {
-			color:#FFF;
-			}
-		textarea {
-			width: 100%;
-			height: 300px;
-			font-size: 24px;
+		.discover h2 {
+			margin-top: 30px;
+			margin-bottom: 20px;
 		}
+		.picture h2 {
+			color:#FFF !important;
+			}
 	</style>
 </head>
 <body class="list">
@@ -37,10 +36,29 @@
 	<section class="slide" id="Cover">
     <div>
       <h2>«Верстаем без боли»</h2>
+      <p>Ну или grunt для самых маленьких</p>
       <br>
-      <p>Дмитрий Вислов, undev</p>
+      <h4>Дмитрий Вислов, undev</h4>
     </div>
   </section>
+
+  <section class="slide">
+		<div>
+			<h2>Многое делается руками</h2>
+			<ul>
+				<li class="next">пишутся HTML-теги вот это вот Shift+Б, Shift+Ю</li>
+				<li class="next">и CSS-селекторы даже</li>
+				<li class="next">спрайты складываются в фотошопе</li>
+				<li class="next">F5 в браузере нажимается тоже руками</li>
+				<li class="next">Надо лазить на сторонние сервисы</li>
+				<li class="next">etc.</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide"><div>
+		<img src="pic/okay_face.png" alt="" height="400">
+	</div></section>
 
 	<section class="slide shout">
 		<div>
@@ -92,6 +110,106 @@
 		</div>
 	</section>
 
+	<section class="slide cover picture"><div>
+		<h2>Ruby On Rails</h2>
+		<img src="pic/rails.png" alt="">
+	</div></section>
+
+	<section class="slide discover">
+		<div>
+	    <h2><a href="http://gruntjs.com">gruntjs.com</a></h2>
+			<img src="pic/grunt.png" alt="" height="300">
+		</div>
+	</section>
+
+	<section class="slide discover" style="background: #000;">
+		<div>
+	    <h2><a href="http://nodejs.org">nodejs.org</a></h2>
+	    <br><br>
+			<img src="pic/nodejs.png">
+		</div>
+	</section>
+
+	<section class="slide discover">
+		<div>
+			<br><br><br>
+	    <h2>npm install -g grunt-cli</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>package.json</h2>
+			<pre>
+				<code>{"name": "myProject",</code>
+				<code>"version": "1.0.0",</code>
+      	<code>&nbsp;&nbsp;"devDependencies": {</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"grunt": "~0.4.1",</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;…</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;"grunt-contrib-jade": "~0.8.0",</code>
+        <code>&nbsp;&nbsp;}</code>
+        <code>}</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Gruntfile.coffee</h2>
+			<pre>
+				<code>module.exports = (grunt) -></code>
+      	<code>&nbsp;&nbsp;grunt.initConfig</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;…</code>
+        <code>&nbsp;&nbsp;grunt.loadNpmTasks "grunt-contrib-connect"</code>
+        <code>&nbsp;&nbsp;grunt.registerTask "server", "connect"</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide discover">
+		<div>
+			<br><br><br>
+	    <h2>npm install grunt-contrib-sass</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-sass</h2>
+			<pre>
+				<code>sass:</code>
+      	<code>&nbsp;&nbsp;dist:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;files:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"compile/css/app.css": ["sass/app.sass"]</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="http://livereload.com/">livereload</a></h2>
+		</div>
+	</section>
+
+	<section class="slide cover picture"><div>
+		<h2>АД</h2>
+		<img src="pic/rwd.jpg" alt="">
+	</div></section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-contrib-watch</h2>
+			<pre>
+				<code>watch:</code>
+				<code>&nbsp;&nbsp;options:</code>
+				<code>&nbsp;&nbsp;&nbsp;&nbsp;livereload: true</code>
+      	<code>&nbsp;&nbsp;css:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;files: "sass/*.sass"</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;tasks: ["sass", "awesome-task"]</code>
+      </pre>
+		</div>
+	</section>
+
 	<section class="slide">
 		<div>
 			<h2>Vendor prefixes</h2>
@@ -124,37 +242,82 @@
 		</div>
 	</section>
 
-	<section class="slide">
+	<section class="slide discover">
 		<div>
-			<h2>Autoprefixer (<a href="https://github.com/ai/autoprefixer">https://github.com/ai/autoprefixer</a>)</h2>
-			<ul>
-				<li class="next">Идём на http://caniuse.com</li>
-				<li class="next">Вставляем что нужно и актуально</li>
-				<li class="next">autoprefixer("last 1 version", "> 1%", "ie 8", "ie 7").compile(css);</li>
-			</ul>
+	    <h2><a href="https://github.com/ai/autoprefixer">autoprefixer</a></h2>
+			<img src="pic/autoprefixer.png" alt="" height="300">
 		</div>
 	</section>
-
-
 
 	<section class="slide shout">
 		<div>
-			<h2>CSSO</h2>
+			<h2><a href="http://caniuse.com/">caniuse</a></h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-autoprefixer</h2>
+			<pre>
+				<code>autoprefixer:</code>
+      	<code>&nbsp;&nbsp;single_file:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;options:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;browsers: ["last 1 version", "> 1%", "ie 8", "ie 7"]</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src: "compile/css/app.css"</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dest: "compile/css/app.css"</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="http://csscomb.ru/">CSS Comb</a></h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-csscomb</h2>
+			<pre>
+				<code>csscomb:</code>
+      	<code>&nbsp;&nbsp;dist:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;files:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"compile/css/app.css": ["compile/css/app.css"]</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="http://ru.bem.info/tools/optimizers/csso/">CSSO</a></h2>
 		</div>
 	</section>
 
 	<section class="slide">
 		<div>
 			<ul>
-				<li class="next">Удаление концевых ‘;’</li>
-				<li class="next">Удаление комментариев</li>
-				<li class="next">Минимизация цвета (#eeeeee -> #eee)</li>
-				<li class="next">Минимизация 0 (0px = 0)</li>
-				<li class="next">Минимизация margin и padding</li>
-				<li class="next"> - margin-left: 10px</li>
-				<li class="next"> - margin-bottom: 15px</li>
-				<li class="next"> - margin: 0 0 15px 10px</li>
+				<li class="">Удаление концевых ‘;’</li>
+				<li class="">Удаление комментариев</li>
+				<li class="">Минимизация цвета (#eeeeee -> #eee)</li>
+				<li class="">Минимизация 0 (0px = 0)</li>
+				<li class="">Минимизация margin и padding</li>
+				<li class=""> - margin-left: 10px</li>
+				<li class=""> - margin-bottom: 15px</li>
+				<li class=""> - margin: 0 0 15px 10px</li>
+				<li class="">etc</li>
 			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-csso</h2>
+			<pre>
+				<code>csso:</code>
+      	<code>&nbsp;&nbsp;dist:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;files:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"compile/css/app.css": ["compile/css/app.css"]</code>
+      </pre>
 		</div>
 	</section>
 
@@ -164,15 +327,118 @@
 		</div>
 	</section>
 
-  <section class="slide shout">
+  <section class="slide discover">
 		<div>
 			<h2>glue</h2>
+			<h2>sprite-factory</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-spritesmith</h2>
+			<pre>
+				<code>sprite:</code>
+      	<code>&nbsp;&nbsp;all:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;src: 'img/*.png'</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;destImg: 'img/sprite.png'</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;destCSS: 'sass/sprite.sass'</code>
+      </pre>
 		</div>
 	</section>
 
 	<section class="slide shout">
 		<div>
-			<h2>sprite-factory</h2>
+			<h2><a href="http://imgo.github.io/imgo/">imgo</a></h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-imagemin</h2>
+			<pre>
+				<code>imagemin:</code>
+      	<code>&nbsp;&nbsp;dynamic:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;files: [</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimizationLevel: 3</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pngquant: true</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src: "compile/img/*.{png,jpg}"</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dest: "." ]</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>DataURI</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>DataURI</h2>
+			<pre>
+				background: url(data:image/gif;base64,R0lGODlhEAA<br>
+					QAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/XBs/fNwfj<br>
+					Z0frl3/zy7////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<br>
+					AAAAAAAAAAAAAAAAAAAAAAAAACH5BAkAABAALAAAAAAQABAAAAVVI<br>
+					CSOZGlCQAosJ6mu7fiyZeKqNKToQGDsM8hBADgUXoGAiqhSvp5QA<br>nQKGIgUhwFUYLCVDFCrKUE1lBavAViFIDlTImbKC5Gm2hB0Sl<br>
+					BCBMQiB0UjIQA7)
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-datauri</h2>
+			<pre>
+				<code>datauri:</code>
+      	<code>&nbsp;&nbsp;default:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;options:</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classPrefix: "data-"</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src: ["img/base64icons/*"]</code>
+        <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dest: ["sass/base64.sass"]</code>
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>grunt-tasks</h2>
+			<pre>
+				grunt.registerTask "default", "watch"
+			<br>
+				grunt.registerTask "makecss", ["sass", "autoprefixer", "csso"]
+      <br>
+				grunt.registerTask "makeimg", ["datauri", "sprite", "imagemin"]
+      </pre>
+		</div>
+	</section>
+
+	<section class="slide discover">
+		<div>
+	    <h2><a href="http://bower.io">bower.io</a></h2>
+			<img src="pic/bower.png" alt="" height="320">
+		</div>
+	</section>
+
+	<section class="slide discover">
+		<div>
+	    <h2><a href="http://yeoman.io">yeoman.io</a></h2>
+			<img src="pic/yeoman.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="http://assemble.io">assemble.io</a></h2>
+		</div>
+	</section>
+
+	<section class="slide discover">
+		<div>
+	    <h2>Вёрстка без рутины — признак молодчины</h2>
+	    <p>© @artpolikarpov</p>
 		</div>
 	</section>
 
