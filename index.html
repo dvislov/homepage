@@ -71,7 +71,7 @@
 
 <script>
   respondToSizingMessage = function(e) {
-    if(e.origin == 'http://chesshost:8080'){
+    if(e.origin == 'http://chesshost:8080/'){
       // e.data is the string sent by the origin with postMessage.
       if(e.data == 'sizing?') {
         e.source.postMessage(document.body.scrollHeight, e.origin);
