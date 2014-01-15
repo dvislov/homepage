@@ -69,5 +69,17 @@
 
 </script>
 
+<script>
+  respondToSizingMessage = function(e) {
+    if(e.origin == 'http://chesshost') {
+      // e.data is the string sent by the origin with postMessage.
+      if(e.data == 'sizing?') {
+        e.source.postMessage(document.body.scrollHeight, e.origin);
+      }
+    }
+  }
+  // we have to listen for 'message'
+  window.addEventListener('message', respondToSizingMessage, false);
+</script>
 </body>
 </html>
