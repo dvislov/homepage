@@ -76,6 +76,7 @@
       if(e.data == 'sizing?') {
         e.source.postMessage(document.body.scrollHeight, e.origin);
       }
+      console.log(e);
     }
   }
   // we have to listen for 'message'
