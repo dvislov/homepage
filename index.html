@@ -69,12 +69,17 @@
 
 </script>
 
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="easyXDM.debug.js"></script>
 <script>
-  var socket = new easyXDM.Socket({
-    onReady:  function(){
-        socket.postMessage(document.body.scrollHeight + ' ' + document.body.offsetHeight + ' ' + document.body.cientHeight)
-     }
+  $(document).ready(function(){
+    var bodyHeight = parseInt($('body').height());
+    console.log(bodyHeight)
+    var socket = new easyXDM.Socket({
+      onReady:  function(){
+          socket.postMessage(bodyHeight)
+       }
+    });
   });
 </script>
 
