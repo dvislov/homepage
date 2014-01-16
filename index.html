@@ -71,13 +71,11 @@
 
 <script src="easyXDM.debug.js"></script>
 <script>
-window.onload = function(){
   var socket = new easyXDM.Socket({
     onReady:  function(){
-        socket.postMessage(document.body.scrollHeight)
+        socket.postMessage(document.body.scrollHeight + ' ' + document.body.offsetHeight + ' ' + document.body.cientHeight)
      }
   });
-};
 </script>
 
 </body>
