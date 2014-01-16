@@ -69,17 +69,21 @@
 
 </script>
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="easyXDM.debug.js"></script>
 <script>
-  $(document).ready(function(){
-    var bodyHeight = parseInt($('body').height());
-    console.log(bodyHeight)
-    var socket = new easyXDM.Socket({
-      onReady:  function(){
-          socket.postMessage(bodyHeight)
-       }
-    });
+  function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    );
+  }
+
+  var socket = new easyXDM.Socket({
+    onReady:  function(){
+        socket.postMessage(getDocHeight())
+     }
   });
 </script>
 </body>
