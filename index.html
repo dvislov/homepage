@@ -69,17 +69,14 @@
 
 </script>
 
+<script src="easyXDM.debug.js"></script>
 <script>
-  respondToSizingMessage = function(e) {
-    if(e.origin == 'http://chesshost:8080/'){
-      // e.data is the string sent by the origin with postMessage.
-      if(e.data == 'sizing?') {
-        e.source.postMessage(document.body.scrollHeight, e.origin);
-      }
-    }
-  }
-  // we have to listen for 'message'
-  window.addEventListener('message', respondToSizingMessage, false);
+var socket = new easyXDM.Socket({
+  onReady:  function(){
+      socket.postMessage(document.body.scrollHeight)
+   }
+});
 </script>
+
 </body>
 </html>
