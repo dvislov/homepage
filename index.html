@@ -68,14 +68,16 @@
   })();
 
 </script>
-
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="easyXDM.debug.js"></script>
 <script>
-var socket = new easyXDM.Socket({
-  onReady:  function(){
-      socket.postMessage(document.body.scrollHeight)
-   }
-});
+$(document).ready(function(){
+  var socket = new easyXDM.Socket({
+    onReady:  function(){
+        socket.postMessage(document.body.scrollHeight)
+     }
+  });
+})
 </script>
 
 </body>
