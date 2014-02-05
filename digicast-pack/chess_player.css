@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic-ext,latin-ext,cyrillic);
+
+body {
+  background: #e7e7e2 !important;
+  font-family: 'PT Sans' !important;
+}
+
+.b-flash-player {
+  margin-bottom: 0px !important;
+  background-color: #000;
+}
+
+/* controls */
+.b-video-player__controls {
+  overflow: hidden;
+  background: #101117;
+  background: rgba(0,0,0,0.4);
+  color: #e7e7e2;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 15px;
+}
+
+/* quality */
+.b-video-player__language,
+.b-video-player__quality {
+  color: #e7e7e2;
+}
+.b-video-player__language {
+  width: 300px !important;
+}
+.b-video-player__quality a.quality,
+.b-video-player__language a.language,
+.b-video-player__language .dd .dd__t {
+  display: inline-block;
+  background: none;
+  color: #e0ded6 !important;
+  cursor: pointer;
+  padding: 0 !important;
+  margin: 0 4px;
+  text-align: center;
+  text-decoration: none !important;
+  border-bottom: 1px dashed;
+}
+.b-video-player__language a.language,
+.b-video-player__language .dd .dd__t{
+  width: auto !important;
+}
+.b-video-player__quality a.active,
+.b-video-player__language a.active,
+.b-video-player__language dd.active .dd__t {
+  color: #ffd300 !important;
+  border: none;
+  font-weight: bold;
+}
+.b-video-player__language .dd__catlist,
+.b-video-player__language .dd__t:after {
+  display: none !important;
+}
+.b-video-player__language .dd {
+  margin: 0 !important;
+}
+.b-video-player__language .dd__t {
+}
+.b-video-player__language .dd.active {
+  background: none !important;
+  padding: 0 !important;
+}
+
+/* copyright */
+.b-tech__corner {
+  display: none !important;
+}
+.b-tech {
+  background: none !important;
+  font-family: 'Arial';
+  font-size: 12px;
+  padding: 15px 0 10px;
+  color: #737373 !important;
+  margin-top: 0 !important;
+}
+.b-tech a {
+  color: #737373 !important;
+  font-weight: normal !important;
+  text-decoration: underline !important;
+}
+
+
+/* episodes */
+.b-game-episodes {
+  padding-left: 14px !important;
+  height: 299px;
+}
+.b-game-episodes h2 {
+  font-size: 19px;
+  font-family: 'PT Sans';
+  line-height: 29px;
+  margin-bottom: 14px;
+}
+.b-game-episodes-list li {
+  border: none !important;
+  font-size: 14px;
+  line-height: 15px;
+  font-family: 'PT Sans';
+  padding: 0 0 12px !important;
+  color: #393939 !important;
+}
+.b-game-episodes-list li .time {
+  color: #393939 !important;
+  display: inline-block;
+  background: #e0ded6 !important;
+  border-bottom: 2px solid #b3b2ab;
+  padding: 5px 8px;
+  border-radius: 4px;
+  margin: 0 0 4px !important;
+}
+.b-game-episodes-list li a {
+  display: block;
+  text-decoration: none !important;
+}
+.b-game-episodes-list li.active .time {
+  background: #ffd300 !important;
+  border-bottom: none;
+  border-top: 2px solid #cca900;
+  color: #000 !important;
+}
+.b-game-episodes-list li.active a {
+  font-weight: bold;
+  color: #393939 !important;
+}
+
+/* scroll */
+.enscroll-track {
+  background-color: #bdbdba;
+  background: -moz-linear-gradient(left, #e7e7e2 0, #e7e7e2 4px, #bdbdba 4px, #bdbdba 8px, #e7e7e2 8px, #e7e7e2 12px); /* FF3.6+ */
+  background: -webkit-linear-gradient(left, #e7e7e2 0, #e7e7e2 4px, #bdbdba 4px, #bdbdba 8px, #e7e7e2 8px, #e7e7e2 12px); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #e7e7e2 0, #e7e7e2 4px, #bdbdba 4px, #bdbdba 8px, #e7e7e2 8px, #e7e7e2 12px); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #e7e7e2 0, #e7e7e2 4px, #bdbdba 4px, #bdbdba 8px, #e7e7e2 8px, #e7e7e2 12px); /* IE10+ */
+  background: linear-gradient(to right, #e7e7e2 0, #e7e7e2 4px, #bdbdba 4px, #bdbdba 8px, #e7e7e2 8px, #e7e7e2 12px); /* W3C */
+  width: 12px;
+  margin: 0;
+}
+.vertical-handle {
+  width: 12px;
+  background-color: #ffd300;
+}

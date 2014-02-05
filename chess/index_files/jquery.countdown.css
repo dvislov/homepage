@@ -1,0 +1,74 @@
+.countdown {
+	background-size:100%;
+	background-image:url(/public/player/Countdown-background.jpg);
+	font-family: ArialNarrow, Ariel, sans-serif; 
+}
+.hasCountdown {
+	margin:auto;
+	padding-top:85px;
+	width:250px;
+}
+.hasCountdown td {
+	padding:0 8px;
+}
+.countdown_rtl {
+	direction: rtl;
+}
+.countdown_show {
+	border:3px solid #c4c5c7;
+	background-color:#222;
+	/*color:#d6c29d;*/
+	color:#f6e2bd;
+	padding:8px 0px;
+	
+	background: #2d2e32; /* Old browsers */
+	background: -moz-linear-gradient(top, #2d2e32 0%, #868693 49%, #1e1f21 100%, #9a9eaa 100%, #252628 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2d2e32), color-stop(49%,#868693), color-stop(100%,#1e1f21), color-stop(100%,#9a9eaa), color-stop(100%,#252628)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2d2e32 0%,#868693 49%,#1e1f21 100%,#9a9eaa 100%,#252628 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2d2e32 0%,#868693 49%,#1e1f21 100%,#9a9eaa 100%,#252628 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #2d2e32 0%,#868693 49%,#1e1f21 100%,#9a9eaa 100%,#252628 100%); /* IE10+ */
+	background: linear-gradient(top, #2d2e32 0%,#868693 49%,#1e1f21 100%,#9a9eaa 100%,#252628 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d2e32', endColorstr='#252628',GradientType=0 ); /* IE6-9 */
+}
+.countdown_row {
+	clear: both;
+	text-align: center;
+	margin:auto;
+	border:none !important;
+}
+
+.countdown_section {
+	font-size: 85%;
+	text-align: center;
+	font: ArialNarrow, fantasy bolder;
+	text-transform:uppercase;
+	text-shadow:1px 1px 0 #b5bfd8;
+}
+.countdown_section td {
+	padding-top:5px;	
+}
+
+.countdown_amount {
+	font-size: 370%;
+}
+.countdown_amount td {
+	padding:0 1px !important;	
+}
+.delimeter {
+	background:#000 !important;	
+	padding:0 !important;
+	vertical-align:middle !important;
+} 
+.delimeter span {
+	font-size: 60%;	
+}
+
+
+.countdown_descr {
+	display: block;
+	width: 100%;
+	font-size:180%;
+	color:#222;
+	padding-bottom:5px;
+	text-shadow:1px 1px 0 #b5bfd8;
+}
