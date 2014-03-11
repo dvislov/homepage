@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="mailsandbox" horiz-adv-x="1000" >
+<font-face font-family="mailsandbox" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="star-empty" unicode="&#x63;" d="m880 454l-262-196l94-348l-272 208l-272-208l94 348l-262 196l320 0l120 336l120-336l320 0z m-440-238l150-124l-62 178l144 114l-176-4l-56 202l-54-202l-176 4l142-114l-62-178z" horiz-adv-x="880" />
+<glyph glyph-name="user" unicode="&#x62;" d="m736 128q204-72 204-122l0-106l-940 0l0 106q0 50 204 122q94 34 128 69t34 95q0 22-22 49t-32 73q-2 12-9 18t-14 8t-14 17t-9 43q0 16 5 26t9 12l4 4q-8 50-12 88q-4 54 41 112t157 58t158-58t40-112l-12-88q18-8 18-42q-2-28-9-43t-14-17t-14-8t-9-18q-8-48-31-74t-23-48q0-60 35-95t127-69z" horiz-adv-x="940" />
+<glyph glyph-name="check" unicode="&#x66;" d="m249 0q-34 0-56 28l-180 236q-16 24-12 52t26 46t51 14t47-28l118-154l296 474q16 24 43 30t53-8q24-16 30-43t-8-53l-350-560q-20-32-56-32z" horiz-adv-x="667" />
+<glyph glyph-name="direction" unicode="&#x65;" d="m848 768q8-8 11-16t-2-22t-10-26t-19-39t-24-49q-54-112-147-286t-157-292l-66-118l-54 380l-380 56q442 246 696 368q20 10 48 25t39 20t25 9t23 1t17-11z m-92-96l-304-280l28-234z" horiz-adv-x="860" />
+<glyph glyph-name="phone" unicode="&#x61;" d="m461 290q162 162 118 206l-8 8q-30 30-41 48t-4 54t49 88q20 24 37 39t35 16t30 1t29-13t24-18t26-25t21-22q48-48-6-194t-204-294q-150-150-295-205t-193-7q-2 2-23 22t-25 25t-18 24t-13 31t2 30t15 35t38 37q42 34 70 47t54 2t35-18t39-37q44-44 208 120z" horiz-adv-x="800" />
+<glyph glyph-name="right-open" unicode="&#x64;" d="m98 626l226-236q16-16 16-40q0-22-16-38l-226-236q-16-16-40-16t-40 16q-36 36 0 80l186 194l-186 196q-36 44 0 80q16 16 41 16t39-16z" horiz-adv-x="340" />
+</font>
+</defs>
+</svg>
