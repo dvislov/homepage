@@ -484,6 +484,37 @@
     </div>
   </section>
 
+  <section class="slide"><div>
+    <h2>yo yogurt</h2>
+    <img src="pic/yo-install.png" alt="" height="360">
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>_bower.json</h2>
+    <pre>
+      <code>{</code>
+      <code>&nbsp;&nbsp;"name": "package",</code>
+      <code>&nbsp;&nbsp;"version": "0.0.1",</code>
+      <code>&nbsp;&nbsp;"dependencies": {</code>
+      <code>&nbsp;&nbsp;&nbsp;&nbsp;<% if (jquery) { %>, "jquery": "~2.1.0"<% } %></code>
+      <code>&nbsp;&nbsp;}</code>
+      <code>}</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>_Gruntfile.coffee</h2>
+    <pre>
+    <code><mark><% if (datauri) { %></mark>datauri:</code>
+    <code>&nbsp;&nbsp;default:</code>
+    <code>&nbsp;&nbsp;options:</code>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;classPrefix: "data-"</code>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;src: ["app/compile/img/base64icons/*"]</code>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;dest: ["app/sass/base64.sass"]</code>
+    <code><mark><% } %></mark></code>
+    </pre>
+  </div></section>
+
   <section class="slide discover">
     <div>
       <h2>Вёрстка без рутины — признак молодчины</h2>
