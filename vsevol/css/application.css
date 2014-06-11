@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  background-color: #050505;
+  background: url(../img/bg_body.jpg) center -138px no-repeat;
   min-width: 960px;
   color: #cbcbcb;
   font-family: Tahoma;
