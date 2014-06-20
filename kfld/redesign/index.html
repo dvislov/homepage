@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Yeoman yogurt generator</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/bootstrap-grid.css">
     <link type="text/css" rel="stylesheet" href="css/application.css">
@@ -10,10 +13,9 @@
     <div class="header">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
-            <div class="name-big">Кафедра функциональной и лабораторной диагностики</div>
-            <div class="name-small">ФГБОУ ВПО Чувашский государственный университет им. И.Н.Ульянова</div><img src="img/visual.jpg" width="100%" class="visual">
-          </div>
+          <div class="col-xs-12"><a href="/">
+              <div class="name-big">Кафедра функциональной и лабораторной диагностики</div>
+              <div class="name-small">ФГБОУ ВПО Чувашский государственный университет им. И.Н.Ульянова</div><img src="img/visual.jpg" width="100%" class="visual"></a></div>
         </div>
       </div>
     </div>
@@ -21,7 +23,10 @@
       <div class="row">
         <div class="col-md-3">
           <nav class="main-menu">
-            <ul>
+            <ul class="menu-slider">
+              <li><a href="#">Меню</a></li>
+            </ul>
+            <ul class="menu-content">
               <li><a href="#">Общие сведения</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">История кафедры</a></li>
@@ -31,7 +36,7 @@
               <li><a href="#">Сотрудники</a></li>
               <li><a href="#">Студенческий научный кружок</a></li>
               <li><a href="#">Учебная работа</a></li>
-              <li><a href="#">Расписание</a></li>
+              <li class="active"><a href="#">Расписание</a></li>
               <li><a href="#">Список учебной литературы</a></li>
               <li><a href="#">Перечень вопросов к итоговому контролю</a></li>
               <li><a href="#">Перечень практических навыков и умений</a></li>
@@ -164,5 +169,7 @@
         </div>
       </div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/application.js"></script>
   </body>
 </html>

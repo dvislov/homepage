@@ -51,6 +51,11 @@ body {
   color: #dedede;
 }
 
+.header a {
+  color: #dedede;
+  text-decoration: none;
+}
+
 .name-big {
   font-size: 30px;
   line-height: 30px;
@@ -75,13 +80,65 @@ body {
 .main-menu li {
   font-size: 16px;
   line-height: 18px;
-  padding: 10px 0;
-  border-bottom: 1px dotted #cccccc;
+  border-top: 1px dotted #cccccc;
+  border-bottom: 1px solid transparent;
+}
+
+.main-menu li:first-child {
+  border-top-color: transparent;
+}
+
+.main-menu li.active {
+  border: 2px solid #445893;
+  border-radius: 6px;
+}
+
+.main-menu li.active a {
+  color: black;
+}
+
+.main-menu li.active + li {
+  border-top-color: transparent;
 }
 
 .main-menu a {
   color: #003366;
   text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  display: block;
+  padding: 10px;
+}
+
+.main-menu a:hover {
+  color: #cccccc;
+}
+
+.menu-slider {
+  display: none;
+}
+
+.menu-slider li {
+  text-align: center;
+}
+
+.menu-slider a {
+  color: white;
+  background-color: #003366;
+}
+
+@media (max-width: 992px) {
+  .menu-slider {
+    display: block;
+  }
+
+  .menu-content {
+    display: none;
+  }
+
+  .menu-content-open {
+    display: block;
+  }
 }
 
 .content {
@@ -101,6 +158,10 @@ body {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 18px;
+}
+
+.content a {
+  color: black;
 }
 
 .content p {
