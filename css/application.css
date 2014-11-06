@@ -171,8 +171,11 @@ h2 {
   line-height: 1.5rem;
 }
 
-.works {
-  line-height: 1.3rem;
+.works dt {
+  font-weight: bold;
+}
+.works dd {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 900px) {
