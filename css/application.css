@@ -181,6 +181,7 @@ h2 {
 @media screen and (max-width: 600px) {
   .reward {
     font-size: 5rem;
+    letter-spacing: 0.25rem;
   }
   .motto {
     letter-spacing: 0;
