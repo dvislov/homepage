@@ -43,6 +43,159 @@
     </div>
   </section>
 
+	<section class="slide shout">
+    <div>
+    	<h2>JavaScript Task Runners</h2>
+    </div>
+  </section>
+
+	<section class="slide"><div>
+    <h2>Stat</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>grunt</th>
+				<th>gulp</th>
+			</tr>
+			<tr class="next">
+				<td>date</td>
+				<td>summer 2012</td>
+				<td>summer 2013</td>
+			</tr>
+			<tr class="next">
+				<td>modules</td>
+				<td>3,638</td>
+				<td>980</td>
+			</tr>
+		</table>
+  </div></section>
+
+  <section class="slide">
+    <div>
+    	<h2>Command Line Interface</h2>
+			<p>gulp не выносит свой CLI из основного модуля</p>
+			<pre>
+				<code>npm install -g grunt-cli</code>
+			</pre>
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+    	<h2>Потоковая передача данных</h2>
+			<ul>
+				<li class="next">передаём файл в gulp, результат сохраняем в другой файл</li>
+				<li class="next">нет промежуточных файлов и папок</li>
+			</ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>grunt</h2>
+			<p>
+				<img src="pic/grunt-flow-2.png" alt="">
+			</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>gulp</h2>
+			<p>
+				<img src="pic/gulp-flow.png" alt="">
+			</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>Gulp plugin</h2>
+			<ul>
+				<li class="next">каждый плагин должен выполнять только <b>одно</b> простое действие</li>
+				<li class="next">gulp всего лишь соединяет и организует эти действия в задачи</li>
+				<li class="next">нет дублирующих и конфликтующих плагинов</li>
+			</ul>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>gulp API</h2>
+			<pre>
+				<code>.src(globs[, options])</code>
+				<code>.dest(path)</code>
+				<code>.task(name[, deps], fn)</code>
+				<code>.run(tasks...[, cb])</code>
+				<code>.watch(glob [, opts], cb)</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>Gruntfile</h2>
+			<p>Configuration over code</p>
+			<h2>Gulpfile</h2>
+			<p>Code over configuration</p>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>gruntfile example</h2>
+    	<pre>
+    		<code>jade:</code>
+		    <code>  compile:</code>
+		    <code>    options:</code>
+		    <code>      pretty: true</code>
+        <code>files: [</code>
+        <code>  cwd: "app/jade"</code>
+        <code>  src: [ "**/*.jade", "!**/_shared/*.jade" ]</code>
+        <code>  dest: "app/compile"</code>
+        <code>  expand: true</code>
+        <code>  ext: ".html"</code>
+        <code>]</code>
+    	</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>gulpfile example</h2>
+    	<pre>
+    	<code>gulp.task 'jade', -></code>
+			<code>&nbsp;&nbsp;gulp.src config.paths.jade.src</code>
+			<code>&nbsp;&nbsp;.pipe plugins.jade</code>
+			<code>&nbsp;&nbsp;&nbsp;&nbsp;pretty: true</code>
+			<code>&nbsp;&nbsp;.pipe gulp.dest config.paths.jade.compile</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>.pipe()</h2>
+    	<blockquote class="next">
+    		<p>.pipe() is just a function that takes a readable source stream src and hooks the output to a destination writable stream dst</p>
+    	</blockquote>
+    	<pre class="next">
+	    	<code>a.pipe(b);</code>
+				<code>b.pipe(c);</code>
+				<code>c.pipe(d);</code>
+			</pre>
+			<pre class="next">
+    		<code>a.pipe(b).pipe(c).pipe(d);</code>
+			</pre>
+    </div>
+  </section>
+
+  <section class="slide shout">
+    <div>
+    	<h2>gulp не нужен watch</h2>
+    </div>
+  </section>
+
 	<section class="slide"><div>
     <h2>Измерь это</h2>
 		<table>
@@ -51,13 +204,68 @@
 				<th>grunt</th>
 				<th>gulp</th>
 			</tr>
-			<tr>
+			<tr class="next">
 				<td>jade</td>
 				<td>1300 ms</td>
 				<td>649 ms</td>
 			</tr>
+			<tr class="next">
+				<td>sass</td>
+				<td>2.348 ms</td>
+				<td>1.27 ms</td>
+			</tr>
+			<tr class="next">
+				<td>js min + concat</td>
+				<td>750 ms</td>
+				<td>100 ms</td>
+			</tr>
 		</table>
   </div></section>
+
+  <section class="slide shout">
+    <div>
+    	<h2>Что выбираем?</h2>
+    </div>
+  </section>
+
+  <section class="slide shout">
+    <div>
+    	<h2>Думаем головой</h2>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div>
+    	<h2>Думаем головой</h2>
+    	<ul>
+    		<li class="next">gulp быстрее</li>
+    		<li class="next">возможности grunt обширнее</li>
+    		<li class="next">выбирайте инструмент, который
+    			<ul>
+    				<li class="next">вам понятен</li>
+    				<li class="next">вам удобен</li>
+    				<li class="next"><b>делает именно то, что вам нужно</b></li>
+    			</ul>
+    		</li>
+    	</ul>
+    </div>
+  </section>
+
+	<section class="slide">
+    <div>
+    	<h2>Не будьте извращенцами!</h2>
+    	<h2><a href="https://github.com/gratimax/gulp-grunt">https://github.com/gratimax/gulp-grunt</a></h2>
+    </div>
+  </section>
+
+   <section class="slide">
+  	<div>
+  		<h2>Куда дальше?</h2>
+  		<p>
+  			<img src="pic/what-is-webpack.png" alt="" width="600">
+  		</p>
+  	</div>
+  </section>
 
 	<section class="slide"><div>
     <h2>«gr?u(nt|lp)».</h2>
