@@ -466,8 +466,14 @@ body {
 .aside-closed .aside .nav {
   display: none;
 }
+.driver .aside {
+  background: rgba(0,0,0,0.5);
+}
+.driver .aside-closed .aside {
+  background: #000;
+}
 .aside {
-  background-color: #000;
+  background: #000;
   height: 100%;
   overflow: hidden;
   float: left;
@@ -524,4 +530,30 @@ body {
 }
 .wysiwyg-content p + h2 {
   padding-top: 90px;
+}
+.drivers-gallery {
+  font-size: 0;
+}
+.driver-item {
+  display: inline-block;
+  height: 220px;
+  width: 33.3%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.driver-item:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.drivers-gallery:hover .driver-item:after {
+  opacity: 0.5;
+}
+.drivers-gallery:hover .driver-item:hover:after {
+  opacity: 0;
 }
