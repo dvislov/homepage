@@ -426,6 +426,47 @@ th {
   padding: 0;
 }
 
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?42risq");
+  src: url("../fonts/icomoon.eot?#iefix42risq") format('embedded-opentype'), url("../fonts/icomoon.woff?42risq") format('woff'), url("../fonts/icomoon.ttf?42risq") format('truetype'), url("../fonts/icomoon.svg?42risq#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-cool:before {
+  content: "\e600";
+}
+.icon-path:before {
+  content: "\e601";
+}
+.icon-chain:before {
+  content: "\e602";
+}
+.icon-share:before {
+  content: "\e603";
+}
+.icon-arrow:before {
+  content: "\e604";
+}
 html,
 body {
   width: 100%;
@@ -438,6 +479,13 @@ body {
   font-weight: 400;
 }
 .main {
+  height: 100%;
+  min-height: 600px;
+  display: table;
+}
+.content {
+  display: table-cell;
+  width: 100%;
   height: 100%;
 }
 .aside {
@@ -476,9 +524,9 @@ body {
 .aside {
   background: #000;
   height: 100%;
-  overflow: hidden;
-  float: left;
-  position: fixed;
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
 }
 .aside .logo-small {
   display: none;
@@ -507,6 +555,9 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.nav-link:hover {
+  text-decoration: underline;
+}
 .route-summary {
   position: absolute;
   bottom: 28px;
@@ -517,6 +568,11 @@ body {
   font-size: 10px;
   text-decoration: none;
 }
+.route-summary a i {
+  font-size: 12px;
+  position: relative;
+  top: 1px;
+}
 .route-summary p {
   font-size: 12px;
   line-height: 14px;
@@ -526,9 +582,17 @@ body {
   font-size: 36px;
   margin: 0 0 30px;
 }
+.route-map {
+  display: block;
+  margin-bottom: 10px;
+}
 .route-namelink {
   display: block;
   margin-bottom: 30px;
+}
+.route-namelink .icon-chain {
+  position: relative;
+  top: 2px;
 }
 .route-service-links ul {
   margin: 0;
@@ -574,19 +638,69 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   position: relative;
+  overflow: hidden;
 }
 .driver-item:after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   background: #000;
   opacity: 0;
   transition: opacity 300ms ease;
+  left: -1px;
+  top: -1px;
 }
 .drivers-gallery:hover .driver-item:after {
   opacity: 0.5;
 }
 .drivers-gallery:hover .driver-item:hover:after {
   opacity: 0;
+}
+.driver {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.driver-gallery {
+  position: relative;
+  height: 100%;
+}
+.driver-gallery img {
+  display: inline-block;
+  border: 3px solid #8e8e8e;
+}
+.driver-gallery i {
+  font-size: 96px;
+  position: relative;
+  top: -10px;
+}
+.driver-nav {
+  position: absolute;
+  height: 100px;
+  bottom: 26px;
+  opacity: 0.4;
+  transition: all 300ms ease;
+  text-decoration: none;
+  color: #8e8e8e;
+}
+.driver-nav:hover {
+  opacity: 1;
+}
+.prev-driver {
+  left: -12px;
+}
+.prev-driver i {
+  margin-right: -20px;
+}
+.next-driver {
+  right: -12px;
+}
+.next-driver i {
+  margin-left: -20px;
+}
+.next-driver i:before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
