@@ -1,6 +1,6 @@
 (function() {
   $(document).ready(function() {
-    return $('.logo').click(function() {
+    return $('.driver .logo').click(function() {
       return $('.main').toggleClass('aside-closed');
     });
   });
