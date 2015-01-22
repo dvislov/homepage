@@ -453,19 +453,22 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-cool:before {
-  content: "\e600";
+  content: "\61";
 }
 .icon-path:before {
-  content: "\e601";
+  content: "\62";
 }
 .icon-chain:before {
-  content: "\e602";
+  content: "\63";
 }
 .icon-share:before {
-  content: "\e603";
+  content: "\64";
 }
-.icon-arrow:before {
-  content: "\e604";
+.icon-arrow2left:before {
+  content: "\65";
+}
+.icon-arrow2right:before {
+  content: "\66";
 }
 html,
 body {
@@ -584,6 +587,11 @@ body {
   line-height: 14px;
   margin: 0 0 14px;
 }
+.route-summary i {
+  font-size: 22px;
+  top: 5px;
+  position: relative;
+}
 .route-driver-name {
   font-size: 36px;
   margin: 0 0 30px;
@@ -597,8 +605,7 @@ body {
   margin-bottom: 30px;
 }
 .route-namelink .icon-chain {
-  position: relative;
-  top: 2px;
+  top: 6px;
 }
 .route-service-links ul {
   margin: 0;
@@ -704,9 +711,4 @@ body {
 }
 .next-driver i {
   margin-left: -20px;
-}
-.next-driver i:before {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
