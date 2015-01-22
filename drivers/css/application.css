@@ -582,6 +582,9 @@ body {
   font-size: 10px;
   text-decoration: none;
 }
+.route-summary a:hover {
+  color: #fff;
+}
 .route-summary p {
   font-size: 12px;
   line-height: 14px;
