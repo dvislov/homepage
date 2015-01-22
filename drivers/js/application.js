@@ -5,4 +5,12 @@
     });
   });
 
+  $(document).ready(function() {
+    return $('.driver-item').mouseenter(function() {
+      return $('.route-summary').addClass('visible');
+    }).mouseleave(function() {
+      return $('.route-summary').removeClass('visible');
+    });
+  });
+
 }).call(this);
