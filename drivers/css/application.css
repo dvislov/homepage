@@ -484,6 +484,7 @@ body {
 .main {
   height: 100%;
   min-height: 600px;
+  min-width: 800px;
   display: table;
 }
 .content {
@@ -680,6 +681,7 @@ body {
 }
 .driver-gallery {
   position: relative;
+  overflow: hidden;
   height: 100%;
 }
 .driver-gallery img {
