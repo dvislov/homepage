@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/application.css">
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="pull-left"><img src="images/lobby_logo.png" width="77" height="27" alt="Logo" class="header-logo"></div>
+        <div class="pull-right">
+          <div class="header-controls">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link nav-link__active">Current Session</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Cashier</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Help</a></li>
+              </ul>
+            </nav>
+            <div class="header-time">12:00 UTC+4</div>
+            <div class="header-user"><img src="http://lorempixel.com/g/56/56" width="28" height="28" class="header-user-avatar"><span class="header-user-caret"></span></div>
+            <div class="header-chat"><span class="header-chat-label">Chat</span><span class="header-chat-dialogs">0</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="pull-left">
+          <nav class="nav nav__type-filter-left">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#" class="nav-link nav-link__active">Cache games</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Tourney</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Sit'n'Go</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="pull-right">
+          <nav class="nav nav__type-filter-right">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="#" class="nav-link">My tables<span class="nav-digit">2</span></a></li>
+              <li class="nav-item"><a href="#" class="nav-link nav-link__active js-filter-button">Filter</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="filter-content js-filter-content">
+        <div class="filter-labels">
+          <div class="filter-label">maximum players</div>
+          <div class="filter-label">game type</div>
+          <div class="filter-label">stakes</div>
+          <div class="filter-label">buy in</div>
+          <div class="filter-label">sort by</div>
+          <div class="filter-label">advanced</div>
+        </div>
+        <div class="filter-controls">
+          <div class="filter-control-group">
+            <nav class="nav nav__type-players">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link nav-link__active">2</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">3</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">5</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">9</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="filter-control-group">
+            <div class="filter-select">Hold'em
+              <div class="header-user-caret header-user-caret__at-select"></div>
+            </div>
+          </div>
+          <div class="filter-control-group">
+            <div class="filter-range">
+              <div style="width: 50%; left: 25%;" class="filter-range-stripe"></div>
+              <div style="left: 25%;" class="filter-range-drag">
+                <div class="filter-range-drag-label">$ 0.4</div>
+              </div>
+              <div style="left: 75%;" class="filter-range-drag">
+                <div class="filter-range-drag-label">$ 0.6</div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-control-group">
+            <div class="filter-range">
+              <div style="width: 100%; left: 0%;" class="filter-range-stripe"></div>
+              <div style="left: 0;" class="filter-range-drag"></div>
+              <div style="left: 100%;" class="filter-range-drag"></div>
+              <div class="filter-range-drag-label-default">No limit</div>
+            </div>
+          </div>
+          <div class="filter-control-group">
+            <nav class="nav nav__type-stakes">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link nav-link__active">Stakes</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Avg.</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pot</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="filter-control-group">
+            <nav class="nav nav__type-advanced">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Clear all</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="lobby-list lobby-list__display-table">
+        <div class="lobby-list-header">
+          <div class="lobby-list-header-item">limit<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item">tables<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item">game type<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item">seats<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item">stakes<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item">buy in<span class="lobby-list-header-item-help">?</span></div>
+          <div class="lobby-list-header-item"><span class="lobby-list-header-item-help"></span>hide full
+            <div class="lobby-view-switcher">
+              <div class="lobby-view lobby-view__type-table lobby-view__state-active"></div>
+              <div class="lobby-view lobby-view__type-list"></div>
+              <div class="lobby-view lobby-view__type-settings"></div>
+            </div>
+          </div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__filled">9/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-disabled">Full table</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 2</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">2/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">James Bond' Table</div>
+          <div class="lobby-item-content">Omaha No limit</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Joe Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">London Table</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__almost-fill">8/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item lobby-item__type-active">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">table 8<span class="lobby-item-yours">(yours)</span></div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">3/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-primary">Sit Out</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__filled">9/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-disabled">Full table</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 2</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">2/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">James Bond' Table</div>
+          <div class="lobby-item-content">Omaha No limit</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Joe Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">London Table</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__almost-fill">8/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item lobby-item__type-active">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">table 8<span class="lobby-item-yours">(yours)</span></div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">3/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-primary">Sit Out</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__filled">9/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-disabled">Full table</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 2</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">2/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">James Bond' Table</div>
+          <div class="lobby-item-content">Omaha No limit</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Joe Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">London Table</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__almost-fill">8/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item lobby-item__type-active">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">table 8<span class="lobby-item-yours">(yours)</span></div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">3/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-primary">Sit Out</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__filled">9/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-disabled">Full table</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Table 2</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">2/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">James Bond' Table</div>
+          <div class="lobby-item-content">Omaha No limit</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">Joe Table 1</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">4/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">London Table</div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content lobby-item-content__almost-fill">8/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-sucess">Sit Here</a></div>
+        </div>
+        <div class="lobby-item lobby-item__type-active">
+          <div class="lobby-item-content">2/4 - 5/10</div>
+          <div class="lobby-item-content">table 8<span class="lobby-item-yours">(yours)</span></div>
+          <div class="lobby-item-content">Hold'em</div>
+          <div class="lobby-item-content">3/9</div>
+          <div class="lobby-item-content">$ 0.4 / $ 0.6</div>
+          <div class="lobby-item-content">$ 6.40 / $ 16</div>
+          <div class="lobby-item-content"><a href="javascript:void(0);" class="lobby-list-button">Watch</a><a href="javascript:void(0);" class="lobby-list-button lobby-list-button__type-primary">Sit Out</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="/js/application.js"></script>
+  </body>
+</html>
