@@ -442,8 +442,7 @@ th {
 }
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?588bxb");
-  src: url("../fonts/icomoon.eot?#iefix588bxb") format('embedded-opentype'), url("../fonts/icomoon.woff?588bxb") format('woff'), url("../fonts/icomoon.ttf?588bxb") format('truetype'), url("../fonts/icomoon.svg?588bxb#icomoon") format('svg');
+  src: url("../fonts/icomoon.woff?588bxb") format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -475,12 +474,42 @@ th {
 .icon-user:before {
   content: "\e604";
 }
+@font-face {
+  font-family: 'HelveticaNeueWeb';
+  src: url("../fonts/HelveticaNeue.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueWeb';
+  src: url("../fonts/HelveticaNeue-UltraLight.woff") format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueWeb';
+  src: url("../fonts/HelveticaNeue-Light.woff") format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueWeb';
+  src: url("../fonts/HelveticaNeue-Medium.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueWeb';
+  src: url("../fonts/HelveticaNeue-Bold.woff") format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
 body {
   background-color: #dcdcdc;
-  font-family: "HelveticaNeueCyr", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeueWeb", Helvetica, Arial, sans-serif;
 }
 html {
   position: relative;
@@ -550,6 +579,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin-left: 16px;
+  font-weight: 200;
 }
 .header-nav-list {
   margin: 0;
@@ -567,7 +597,7 @@ body {
   display: inline-block;
   vertical-align: top;
   text-decoration: none;
-  padding: 21px 15px 25px;
+  padding: 21px 15px 22px;
   color: #665c6e;
   font-weight: 300;
 }
@@ -668,11 +698,15 @@ body {
 .header-cart-content {
   position: relative;
   top: 2px;
+  font-weight: 100;
+}
+.header-cart-content b {
+  font-weight: 400;
 }
 .header-make-order-link {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1.125rem;
 }
 .header-make-order-link .icon-make-order {
@@ -768,7 +802,7 @@ body {
 .catalog-item-header h2 {
   color: #090909;
   font-size: 1.375rem;
-  font-weight: 300;
+  font-weight: 200;
   margin: 0;
 }
 .catalog-item-description {
@@ -878,6 +912,12 @@ body {
   right: 84px;
   top: 0;
   z-index: 1;
+  overflow: hidden;
+}
+.vcard-marble-logo-back {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 .vcard-front {
   width: 595px;
@@ -888,6 +928,127 @@ body {
   bottom: 46px;
   z-index: 2;
   background: #fff;
+  padding: 40px 36px 0 40px;
+  color: #510b76;
+}
+.vcard-front form ::-webkit-input-placeholder {
+  color: transparent;
+}
+.vcard-front form ::-moz-placeholder {
+  color: transparent;
+}
+.vcard-front form :-moz-placeholder {
+  color: transparent;
+}
+.vcard-front form ::-ms-input-placeholder {
+  color: transparent;
+}
+.vcard-marble-logo {
+  position: relative;
+  left: -12px;
+  margin-bottom: 36px;
+}
+.vcard-position {
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-weight: 100;
+}
+.vcard-input,
+.vcard-textarea {
+  border: none;
+  border-bottom: 1px solid transparent;
+  font-size: 14px;
+}
+.vcard-input:focus,
+.vcard-textarea:focus {
+  outline: none;
+}
+.vcard-textarea {
+  resize: none;
+}
+.pull-right .vcard-input,
+.pull-right .vcard-textarea {
+  text-align: right;
+  width: 202px;
+}
+.vcard-site {
+  font-weight: 800;
+}
+.vcard-name {
+  font-size: 24px;
+  font-weight: 100;
+  width: 100%;
+}
+.control-name {
+  position: relative;
+}
+.control-name .controls-remove {
+  top: 6px;
+}
+.control-group {
+  overflow: hidden;
+  margin-bottom: 3px;
+  position: relative;
+}
+.control-label {
+  width: 50px;
+  float: left;
+  font-size: 14px;
+  font-weight: 100;
+}
+.controls {
+  margin-left: 50px;
+  width: 200px;
+  position: relative;
+  padding-right: 16px;
+}
+.controls .vcard-input {
+  width: 100%;
+}
+.controls-remove {
+  display: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  background-color: #510b76;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.controls-remove span {
+  font-size: 12px;
+  line-height: 1;
+  font-family: 'Times New Roman';
+  color: #fff;
+  position: relative;
+  top: -2px;
+}
+.fake-input {
+  font-size: 14px;
+}
+form.editable .controls-remove {
+  display: block;
+}
+form.editable .vcard-input {
+  border-bottom: 1px solid #dcdcdc;
+}
+form.editable .pull-right .vcard-input,
+form.editable .pull-right .vcard-textarea {
+  padding-right: 16px;
+}
+form.editable ::-webkit-input-placeholder {
+  color: #ccc;
+}
+form.editable ::-moz-placeholder {
+  color: #ccc;
+}
+form.editable :-moz-placeholder {
+  color: #ccc;
+}
+form.editable ::-ms-input-placeholder {
+  color: #ccc;
 }
 .vcard-editor-footer {
   padding: 32px 84px 30px 84px;
