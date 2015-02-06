@@ -825,6 +825,9 @@ body {
   font-variant: small-caps;
   padding-left: 8px;
 }
+.vcard-editor {
+  display: none;
+}
 .vcards {
   padding: 0 70px 0 270px;
   min-height: 210px;
