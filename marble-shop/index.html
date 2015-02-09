@@ -157,36 +157,35 @@
           </div>
           <div class="clearfix"></div>
         </div>
-        <div class="vcard-editor">
-          <h3 class="vcard-editor-header">Персональные данные<span data-action="change-form-open-state" class="vcard-editor-collapse">Свернуть<span>—</span></span></h3>
-          <div class="vcard-editor-content">
-            <div class="vcard-back"><img src="images/marble-white.svg" width="90%" class="vcard-marble-logo-back"></div>
-            <div class="vcard-front"><img src="images/marble.svg" width="280" class="vcard-marble-logo">
-              <form data-object="vcard-form">
+        <form data-object="vcard-form" class="vcard-form">
+          <div class="vcard-editor">
+            <h3 class="vcard-editor-header">Персональные данные<span data-action="change-form-open-state" class="vcard-editor-collapse">Свернуть<span>—</span></span></h3>
+            <div class="vcard-editor-content">
+              <div class="vcard-back"><img src="images/marble-white.svg" width="90%" class="vcard-marble-logo-back"></div>
+              <div class="vcard-front"><img src="images/marble.svg" width="280" class="vcard-marble-logo">
                 <div class="control-name">
-                  <input type="text" value="Дмитрий Вислов" readonly="true" class="vcard-input vcard-name">
-                  <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
+                  <input type="text" value="Дмитрий Вислов" readonly="true" tabindex="1" required="required" class="vcard-input vcard-name">
                 </div>
-                <div class="vcard-position">Front-End developer</div>
+                <div class="vcard-position">Региональный представитель</div>
                 <div class="pull-left">
                   <div class="control-group">
                     <div class="control-label">Моб.:</div>
                     <div class="controls">
-                      <input type="text" value="+7 (960) 360-58-67" readonly="true" class="vcard-input vcard-mobile">
+                      <input type="text" value="+7 (960) 360-58-67" readonly="true" tabindex="2" placeholder="Мобильный телефон" class="vcard-input vcard-mobile">
                       <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                     </div>
                   </div>
                   <div class="control-group">
                     <div class="control-label">E-mail:</div>
                     <div class="controls">
-                      <input type="email" value="vdv73rus@marble-x.ru" readonly="true" class="vcard-input vcard-email">
+                      <input type="email" value="vdv73rus@marble-x.ru" readonly="true" tabindex="3" placeholder="Электронная почта" class="vcard-input vcard-email">
                       <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                     </div>
                   </div>
                   <div class="control-group">
                     <div class="control-label">Skype:</div>
                     <div class="controls">
-                      <input type="text" value="vdv73rus" readonly="true" class="vcard-input vcard-email">
+                      <input type="text" value="vdv73rus" readonly="true" tabindex="4" placeholder="Скайп" class="vcard-input vcard-email">
                       <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                     </div>
                   </div>
@@ -199,31 +198,32 @@
                 </div>
                 <div class="pull-right">
                   <div class="control-group">
-                    <input type="text" value="www.marble-x.ru" placeholder="Персональный сайт" readonly="true" class="vcard-input vcard-site">
+                    <input type="text" value="www.marble-x.ru" placeholder="Персональный сайт" readonly="true" tabindex="5" class="vcard-input vcard-site">
                     <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                   </div>
                   <div class="control-group">
-                    <input type="text" placeholder="Телефон офиса" value="+7 (8352) 62-68-40" readonly="true" class="vcard-input vcard-phone">
+                    <input type="text" placeholder="Телефон офиса" value="+7 (8352) 62-68-40" readonly="true" tabindex="6" class="vcard-input vcard-phone">
                     <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                   </div>
                   <div class="control-group">
-                    <textarea placeholder="Адрес офиса" readonly="true" class="vcard-textarea vcard-address">г.Чебоксары, ул.Пресноводская, д.5</textarea>
+                    <textarea placeholder="Адрес офиса" readonly="true" tabindex="7" class="vcard-textarea vcard-address">г.Чебоксары, ул.Пресноводская, д.5</textarea>
                     <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-              </form>
+              </div>
+            </div>
+            <div class="vcard-editor-footer">
+              <div class="pull-left"><a href="javascript:void(0);" data-action="change-form-edit-state" class="btn btn-edit">Изменить данные</a></div>
+              <div class="pull-right">
+                <div class="vcards-total"><span class="vcards-total-price">20<span class="vcards-total-price-currency">mp</span></span><span class="vcards-total-count">100<span class="vcards-total-price-currency">шт</span></span></div>
+                <input type="submit" value="В корзину" class="btn">
+              </div>
+              <div class="clearfix"></div>
+              <p class="vcard-editor-annotation">Внимание! Заверность данных компания ответственности не несет. Все данные вы вводите на свое усмотрение и проверяете их тоже сами. Имя, M-ID, и регион представительства берется согласно вашему профилю.</p>
             </div>
           </div>
-          <div class="vcard-editor-footer">
-            <div class="pull-left"><a href="javascript:void(0);" data-action="change-form-edit-state" class="btn btn-edit">Изменить данные</a></div>
-            <div class="pull-right">
-              <div class="vcards-total"><span class="vcards-total-price">20<span class="vcards-total-price-currency">mp</span></span><span class="vcards-total-count">100<span class="vcards-total-price-currency">шт</span></span></div><a href="javascript:void(0);" class="btn">В корзину</a>
-            </div>
-            <div class="clearfix"></div>
-            <p class="vcard-editor-annotation">Внимание! Заверность данных компания ответственности не несет. Все данные вы вводите на свое усмотрение и проверяете их тоже сами. Имя, M-ID, и регион представительства берется согласно вашему профилю.</p>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </body>

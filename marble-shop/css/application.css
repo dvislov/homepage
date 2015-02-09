@@ -549,6 +549,7 @@ body {
 }
 .btn {
   height: 23px;
+  line-height: 23px;
   background-color: #4a0082;
   border: 1px solid #4a0082;
   border-radius: 4px;
@@ -556,7 +557,11 @@ body {
   font-size: 0.75rem;
   display: inline-block;
   text-decoration: none;
-  padding: 5px 15px;
+  padding: 0 15px;
+}
+.btn[disabled="disabled"] {
+  background-color: #ccc;
+  border: 1px solid #ccc;
 }
 .btn-edit {
   background-color: #fff;
@@ -874,12 +879,12 @@ body {
   display: inline-block;
   padding: 0;
   margin: 0 20px 0 0;
-  vertical-align: top;
+  vertical-align: bottom;
   position: relative;
   top: 3px;
 }
 .vcard-editor .btn {
-  vertical-align: top;
+  vertical-align: bottom;
 }
 .vcard-editor-header {
   font-weight: 300;
@@ -934,16 +939,16 @@ body {
   padding: 40px 36px 0 40px;
   color: #510b76;
 }
-.vcard-front form ::-webkit-input-placeholder {
+.vcard-form ::-webkit-input-placeholder {
   color: transparent;
 }
-.vcard-front form ::-moz-placeholder {
+.vcard-form ::-moz-placeholder {
   color: transparent;
 }
-.vcard-front form :-moz-placeholder {
+.vcard-form :-moz-placeholder {
   color: transparent;
 }
-.vcard-front form ::-ms-input-placeholder {
+.vcard-form ::-ms-input-placeholder {
   color: transparent;
 }
 .vcard-marble-logo {
@@ -1013,7 +1018,6 @@ body {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  text-align: center;
   cursor: pointer;
   background-color: #510b76;
   position: absolute;
@@ -1021,12 +1025,15 @@ body {
   top: 0;
 }
 .controls-remove span {
-  font-size: 12px;
-  line-height: 1;
+  font-size: 11px;
   font-family: 'Times New Roman';
   color: #fff;
-  position: relative;
-  top: -2px;
+  height: 14px;
+  width: 6px;
+  top: 0;
+  left: 3px;
+  position: absolute;
+  display: inline-block;
 }
 .fake-input {
   font-size: 14px;

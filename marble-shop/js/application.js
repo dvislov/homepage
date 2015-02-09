@@ -2,10 +2,16 @@
   $(document).ready(function() {
     $("[data-action='change-form-edit-state']").click(function() {
       $("[data-object='vcard-form']").toggleClass('editable');
-      if ($('.vcard-input').attr('readonly')) {
-        return $('.vcard-input').removeAttr('readonly');
+      if ($(".vcard-form input[type='submit']").attr('disabled')) {
+        $(".vcard-form input[type='submit']").removeAttr('disabled');
       } else {
-        return $('.vcard-input').attr('readonly', 'readonly');
+        $(".vcard-form input[type='submit']").attr('disabled', 'disabled');
+      }
+      $('.vcard-name').focus();
+      if ($('.vcard-input, .vcard-textarea').attr('readonly')) {
+        return $('.vcard-input, .vcard-textarea').removeAttr('readonly');
+      } else {
+        return $('.vcard-input, .vcard-textarea').attr('readonly', 'readonly');
       }
     });
     $('[data-action="clear-self-input-value"]').click(function() {
