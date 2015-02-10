@@ -830,9 +830,6 @@ body {
   font-variant: small-caps;
   padding-left: 8px;
 }
-.vcard-editor {
-  display: none;
-}
 .vcards {
   padding: 0 70px 0 270px;
   min-height: 210px;
@@ -873,7 +870,10 @@ body {
   margin-left: 10px;
 }
 .vcard-editor {
-  border-top: 1px dotted #cacaca;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTk5QTU5QkVBOEVDMTFFNDlCQzU4N0JCOUM2NUI3OTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTk5QTU5QkZBOEVDMTFFNDlCQzU4N0JCOUM2NUI3OTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGQjlFNDcwOUE4NTgxMUU0OUJDNTg3QkI5QzY1Qjc5NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGQjlFNDcwQUE4NTgxMUU0OUJDNTg3QkI5QzY1Qjc5NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv1cIFcAAAAUSURBVHjaYjh9+vR/IGAAYYAAAwBBEQlbpDolfQAAAABJRU5ErkJggg==");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  display: none;
 }
 .vcard-editor .vcards-total {
   display: inline-block;
@@ -906,7 +906,9 @@ body {
   padding-left: 20px;
 }
 .vcard-editor-content {
-  border-bottom: 1px dotted #cacaca;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTk5QTU5QkVBOEVDMTFFNDlCQzU4N0JCOUM2NUI3OTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTk5QTU5QkZBOEVDMTFFNDlCQzU4N0JCOUM2NUI3OTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGQjlFNDcwOUE4NTgxMUU0OUJDNTg3QkI5QzY1Qjc5NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGQjlFNDcwQUE4NTgxMUU0OUJDNTg3QkI5QzY1Qjc5NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv1cIFcAAAAUSURBVHjaYjh9+vR/IGAAYYAAAwBBEQlbpDolfQAAAABJRU5ErkJggg==");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
   padding: 0 84px 46px;
   height: 450px;
   position: relative;
@@ -941,15 +943,19 @@ body {
 }
 .vcard-form ::-webkit-input-placeholder {
   color: transparent;
+  font-weight: 300;
 }
 .vcard-form ::-moz-placeholder {
   color: transparent;
+  font-weight: 300;
 }
 .vcard-form :-moz-placeholder {
   color: transparent;
+  font-weight: 300;
 }
 .vcard-form ::-ms-input-placeholder {
   color: transparent;
+  font-weight: 300;
 }
 .vcard-marble-logo {
   position: relative;
@@ -974,8 +980,18 @@ body {
 .vcard-textarea {
   resize: none;
 }
-.pull-right .vcard-input,
-.pull-right .vcard-textarea {
+.vcard-form-part {
+  position: absolute;
+  bottom: 30px;
+}
+.vcard-form-part-left {
+  left: 40px;
+}
+.vcard-form-part-right {
+  right: 36px;
+}
+.vcard-form-part-right .vcard-input,
+.vcard-form-part-right .vcard-textarea {
   text-align: right;
   width: 202px;
 }
@@ -1044,8 +1060,8 @@ form.editable .controls-remove {
 form.editable .vcard-input {
   border-bottom: 1px solid #dcdcdc;
 }
-form.editable .pull-right .vcard-input,
-form.editable .pull-right .vcard-textarea {
+form.editable .vcard-form-part-right .vcard-input,
+form.editable .vcard-form-part-right .vcard-textarea {
   padding-right: 16px;
 }
 form.editable ::-webkit-input-placeholder {

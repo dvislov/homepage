@@ -9,9 +9,17 @@
       }
       $('.vcard-name').focus();
       if ($('.vcard-input, .vcard-textarea').attr('readonly')) {
-        return $('.vcard-input, .vcard-textarea').removeAttr('readonly');
+        $('.vcard-input, .vcard-textarea').removeAttr('readonly');
       } else {
-        return $('.vcard-input, .vcard-textarea').attr('readonly', 'readonly');
+        $('.vcard-input, .vcard-textarea').attr('readonly', 'readonly');
+      }
+      if ($("[data-object='vcard-form']").hasClass('editable')) {
+        return $('.vcard-input, .vcard-textarea').parents('.control-group').show();
+      } else {
+        $('.vcard-input[value=""]').parents('.control-group').hide();
+        if ($('.vcard-textarea').val() === "") {
+          return $('.vcard-textarea').parents('.control-group').hide();
+        }
       }
     });
     $('[data-action="clear-self-input-value"]').click(function() {
