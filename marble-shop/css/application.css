@@ -978,7 +978,11 @@ body {
   outline: none;
 }
 .vcard-textarea {
+  background: transparent;
   resize: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 14px;
 }
 .vcard-form-part {
   position: absolute;
@@ -1057,7 +1061,8 @@ body {
 form.editable .controls-remove {
   display: block;
 }
-form.editable .vcard-input {
+form.editable .vcard-input,
+form.editable .vcard-textarea {
   border-bottom: 1px solid #dcdcdc;
 }
 form.editable .vcard-form-part-right .vcard-input,

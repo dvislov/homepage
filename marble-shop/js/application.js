@@ -16,7 +16,11 @@
       if ($("[data-object='vcard-form']").hasClass('editable')) {
         return $('.vcard-input, .vcard-textarea').parents('.control-group').show();
       } else {
-        $('.vcard-input[value=""]').parents('.control-group').hide();
+        $('.vcard-input').each(function() {
+          if ($(this).val() === "") {
+            return $(this).parents('.control-group').hide();
+          }
+        });
         if ($('.vcard-textarea').val() === "") {
           return $('.vcard-textarea').parents('.control-group').hide();
         }
