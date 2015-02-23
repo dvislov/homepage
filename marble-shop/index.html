@@ -61,7 +61,9 @@
             </div>
             <div class="catalog-item">
               <div class="catalog-image-wrap">
-                <div class="catalog-image"><img src="images/product-2.png" alt="product" width="137" height="165"></div>
+                <div class="catalog-image"><img src="images/product-2.png" alt="product" width="137" height="165">
+                  <div class="catalog-discount-badge catalog-discount-badge-pre">Предзаказ</div>
+                </div>
               </div>
               <div class="catalog-item-header">
                 <h2>Х-antiox</h2>
@@ -79,7 +81,9 @@
           <div class="catalog-row">
             <div class="catalog-item">
               <div class="catalog-image-wrap">
-                <div class="catalog-image"><img src="images/product-3.png" alt="product" width="239" height="207"></div>
+                <div class="catalog-image"><img src="images/product-3.png" alt="product" width="239" height="207">
+                  <div class="catalog-center-badge">BIZ</div>
+                </div>
               </div>
               <div class="catalog-item-header">
                 <h2>BIZ PACK</h2>
@@ -95,7 +99,12 @@
             </div>
             <div class="catalog-item">
               <div class="catalog-image-wrap">
-                <div class="catalog-image"><img src="images/product-3.png" alt="product" width="239" height="207"></div>
+                <div class="catalog-image"><img src="images/product-3.png" alt="product" width="239" height="207">
+                  <div class="catalog-center-badge">BIZ</div>
+                  <div class="catalog-discount-badge catalog-discount-badge-percent">Скидка
+                    <div class="catalog-discount-value">10%</div>
+                  </div>
+                </div>
               </div>
               <div class="catalog-item-header">
                 <h2>BIZ PROMO</h2>
@@ -113,10 +122,20 @@
           <div class="catalog-row">
             <div class="catalog-item">
               <div class="catalog-image-wrap">
-                <div class="catalog-image"><img src="images/product-4.png" alt="product" width="214" height="119"></div>
+                <div class="catalog-image"><img src="images/product-4.png" alt="product" width="214" height="119">
+                  <div class="catalog-center-badge">PRO</div>
+                  <div class="catalog-discount-badge catalog-discount-badge-percent">Скидка
+                    <div class="catalog-discount-value">20%</div>
+                  </div>
+                </div>
               </div>
               <div class="catalog-item-header">
                 <h2>PRO PACK</h2>
+                <div class="catalog-items-left">
+                  Осталось
+                  &nbsp;<span class="catalog-items-left-badge">56</span>&nbsp;
+                  шт.
+                </div>
               </div>
               <p class="catalog-item-description">В четыре-пять месяцев ребенок, с которым много разговаривают, обучается все более и более сложным звуковым сочетаниям. Когда вы говорите с ним, младенец внимательно вглядывается в ваше лицо. Как только в потоке слов возникает пауза</p>
               <div class="catalog-item-service">
@@ -153,7 +172,8 @@
             </div>
           </div>
           <div class="pull-right">
-            <div class="vcards-total"><span class="vcards-total-price">20<span class="vcards-total-price-currency">mp</span></span><span class="vcards-total-count">100<span class="vcards-total-price-currency">шт</span></span></div><a href="javascript:void(0);" data-action="change-form-open-state" class="btn">Заполнить и купить</a>
+            <div class="vcards-total"><span class="vcards-total-price">20<span class="vcards-total-price-currency">mp</span></span><span class="vcards-total-count">100<span class="vcards-total-price-currency">шт</span></span></div>
+            <button data-action="change-form-open-state" class="btn btn-form-state">Заполнить и купить</button>
           </div>
           <div class="clearfix"></div>
         </div>
@@ -205,9 +225,12 @@
                     <input type="text" placeholder="Телефон офиса" value="+7 (8352) 62-68-40" readonly="true" tabindex="6" class="vcard-input vcard-phone">
                     <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
                   </div>
+                  <div class="control-group control-group-address">
+                    <input type="text" placeholder="Адрес" value="г.Чебоксары" readonly="true" tabindex="7" class="vcard-input vcard-address-line1">
+                    <div data-action="clear-self-input-value" class="controls-remove controls-remove-address"><span>&times;</span></div>
+                  </div>
                   <div class="control-group">
-                    <textarea placeholder="Адрес офиса" readonly="true" tabindex="7" class="vcard-textarea vcard-address">г.Чебоксары, ул.Пресноводская, д.5</textarea>
-                    <div data-action="clear-self-input-value" class="controls-remove"><span>&times;</span></div>
+                    <input type="text" placeholder="" value="ул.Речинков, д.5" readonly="true" tabindex="8" class="vcard-input vcard-address-line2">
                   </div>
                 </div>
               </div>

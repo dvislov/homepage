@@ -799,16 +799,36 @@ body {
   vertical-align: middle;
   display: table-cell;
   width: 100%;
+  position: relative;
 }
 .catalog-item-header {
   margin: 0 0 13px;
   height: 22px;
+  position: relative;
 }
 .catalog-item-header h2 {
   color: #090909;
   font-size: 1.375rem;
   font-weight: 200;
   margin: 0;
+}
+.catalog-items-left {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+  color: #6708af;
+  font-size: 0.8125rem;
+}
+.catalog-items-left-badge {
+  background-color: #4a0082;
+  color: #fff;
+  display: inline-block;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 14px;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: baseline;
 }
 .catalog-item-description {
   color: #2c2c2c;
@@ -829,6 +849,48 @@ body {
 .catalog-item-price-currency {
   font-variant: small-caps;
   padding-left: 8px;
+}
+.catalog-center-badge {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255,255,255,0.34);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  margin-left: -49px;
+  margin-top: -49px;
+  color: #fff;
+  font-size: 2.125rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 108px;
+}
+.catalog-discount-badge {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  position: absolute;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 20px;
+}
+.catalog-discount-badge-pre {
+  background-color: #f7099b;
+  left: 50%;
+  margin-left: -78px;
+  line-height: 78px;
+}
+.catalog-discount-badge-percent {
+  background-color: #c12be7;
+  left: 26px;
+  padding-top: 22px;
+}
+.catalog-discount-value {
+  font-size: 1.5625rem;
 }
 .vcards {
   padding: 0 70px 0 270px;
@@ -967,22 +1029,13 @@ body {
   font-size: 14px;
   font-weight: 100;
 }
-.vcard-input,
-.vcard-textarea {
+.vcard-input {
   border: none;
   border-bottom: 1px solid transparent;
   font-size: 14px;
 }
-.vcard-input:focus,
-.vcard-textarea:focus {
+.vcard-input:focus {
   outline: none;
-}
-.vcard-textarea {
-  background: transparent;
-  resize: none;
-  padding-top: 0;
-  padding-bottom: 0;
-  line-height: 14px;
 }
 .vcard-form-part {
   position: absolute;
@@ -994,8 +1047,7 @@ body {
 .vcard-form-part-right {
   right: 36px;
 }
-.vcard-form-part-right .vcard-input,
-.vcard-form-part-right .vcard-textarea {
+.vcard-form-part-right .vcard-input {
   text-align: right;
   width: 202px;
 }
@@ -1017,6 +1069,9 @@ body {
   overflow: hidden;
   margin-bottom: 3px;
   position: relative;
+}
+.control-group-address {
+  margin-bottom: 0;
 }
 .control-label {
   width: 50px;
@@ -1061,13 +1116,14 @@ body {
 form.editable .controls-remove {
   display: block;
 }
-form.editable .vcard-input,
-form.editable .vcard-textarea {
+form.editable .vcard-input {
   border-bottom: 1px solid #dcdcdc;
 }
-form.editable .vcard-form-part-right .vcard-input,
-form.editable .vcard-form-part-right .vcard-textarea {
+form.editable .vcard-form-part-right .vcard-input {
   padding-right: 16px;
+}
+form.editable .control-group-address {
+  margin-bottom: 3px;
 }
 form.editable ::-webkit-input-placeholder {
   color: #ccc;
