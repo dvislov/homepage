@@ -1,0 +1,502 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/screen.css">
+	<!--
+		To apply styles to the certain slides
+		set slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+        margin:30px 0 0;
+        color:#FFF;
+        text-align:center;
+        font-size:70px;
+        }
+      #Cover p {
+        margin:10px 0 0;
+        text-align:center;
+        color:#FFF;
+        font-style:italic;
+        font-size:20px;
+        }
+        #Cover p a {
+          color:#FFF;
+          }
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Your site need…</h1>
+    <h1>need for speed</h1>
+    <p><a href="http://vdv73.ru/">Дмитрий Вислов</a>, <a href="http://wikimart.ru">wikimart</a></p>
+  </header>
+
+	<section class="slide cover" id="Cover">
+    <div>
+      <img src="pic/mustang.jpg" alt="">
+    	<h2>Your site need for speed</h2>
+      <p>Дмитрий Вислов, wikimart.ru</p>
+    </div>
+  </section>
+
+  <section class="slide"><div>
+    <h2>???</h2>
+    <img src="pic/frames.png" width="100%">
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Почему скорость может быть разной?</h2>
+    <ul>
+      <li class="next">Медленный интернет</li>
+      <li class="next">Просел backend</li>
+      <li class="next">Отвалился сторонний блокирующий JavaScript</li>
+      <li class="next">и т.д.</li>
+    </ul>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>UI Performance</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Теория</h2>
+    <ul>
+      <li>Steve Souders
+        <ul>
+          <li>«High Performance Web Sites» (2007)</li>
+          <li>«Even Faster Web Sites» (2009)</li>
+        </ul>
+      </li>
+      <li>Николай Мациевский
+        <ul>
+          <li>«Разгони свой сайт» (2009)</li>
+        </ul>
+      <li>YouTube / habr: Tips & Tricks</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Что измерять?</h2>
+    <blockquote>
+      <p>Базовые изменения можно делать без измерений.<br>Эксперименты нужно измерять.</p>
+    </blockquote>
+    <figcaption>Иван Карев, Яндекс</figcaption>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Как измерять?</h2>
+    <ul>
+      <li class="next">
+        Browser Network Panel
+      </li>
+      <li class="next">
+        <a href="http://webpagetest.org">http://webpagetest.org</a>
+      </li>
+      <li class="next">
+        <a href="https://developers.google.com/speed/pagespeed/">https://developers.google.com/speed/pagespeed/</a>
+      </li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <img src="pic/network.png" width="100%" alt="">
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>99 / 100</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Нагрузочное тестирование</h2>
+    <img src="pic/jenkins.png" width="100%">
+  </div></section>
+
+  <section class="slide cover" style="background: #fff;"><div>
+    <img src="pic/house.jpg" alt="" style="right: 0; left: auto;">
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Отдавать пользователю</h2>
+    <ul>
+      <li class="next">Только то, что просит</li>
+      <li class="next">Только тогда, когда просит</li>
+    </ul>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>Яндекс.карты</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>api-maps.yandex.ru</h2>
+    <pre>
+      <code>if (typeof window.yandexMapAPILoaded === "undefined") {</code>
+      <code>    var s = document.createElement("script");</code>
+      <code>    s.onload = function(){</code>
+      <code>        window.yandexMapAPILoaded = true;</code>
+      <code>        $(document).trigger('yandexMapAPILoaded');</code>
+      <code>    };</code>
+      <code>    s.src="http://api-maps.yandex.ru/2.0/…";</code>
+      <code>    document.body.appendChild(s);</code>
+    </pre>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>IE9+</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Выпилились</h2>
+    <ul>
+      <li class="next">ie-31-css-fix.js</li>
+      <li class="next">prefix-free.js</li>
+      <li class="next">modernizr.js</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>modernizr</h2>
+    <pre><code>modernizr.localstorage</code></pre>
+    <pre>
+      <code>window.localStorage.setItem('_tmptest', 'temp');</code>
+      <code>hasLocalStorage = true;</code>
+      <code>window.localStorage.removeItem('_tmptest');</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>jQuery UI</h2>
+    <ul>
+      <li class="next">jquery-ui.min.js</li>
+      <li class="next"> По запросу:
+        <ul>
+          <li>core</li>
+          <li>position</li>
+          <li>mouse</li>
+          <li>tabs</li>
+        </ul>
+      </li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Делаем через CSS</h2>
+    <ul>
+      <li>script.js — 4Кб</li>
+    </ul>
+    <pre class="next">
+      <code>height 100vh</code>
+      <code>width 50vw - (site-width / 2)</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Счётчики</h2>
+    <pre>
+      <code class="next">$(window).on('load', function() {</code>
+      <code class="next">    setTimeout(triggerCounters, 0); }</code>
+      <code>…</code>
+      <code class="next">$(document).trigger("countersReady");</code>
+    </pre>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>dns-prefetch</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Баннерная реклама</h2>
+    <ul>
+      <li class="next">adriver.core.js</li>
+      <li class="next">erle.cgi</li>
+      <li class="next">plugin.flash.js</li>
+      <li class="next">plugin.old.adriver.core.js</li>
+      <li class="next">script.js</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Lazy load</h2>
+    <pre class="next">
+      <code>var image = new Image();</code>
+      <code>image.src = "&lt;?=$mainImageThumbnailPreviewUrl?&gt;";</code>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>imgo</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Google Page Speed</h2>
+    <img src="pic/pagespeed.png" width="100%">
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>imgo ок</h2>
+    <img src="pic/imgo.png" width="100%">
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>base64 (&lt;500B)</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Sprite</h2>
+    <p class="next">
+      <table>
+        <tbody><tr>
+          <th scope="col">Тип</th>
+          <th>Размер</th>
+        </tr>
+        <tr>
+          <th scope="row">Горизонтальный</th>
+          <td>75 Кб</td>
+        </tr>
+        <tr>
+          <th scope="row">Вертикальный</th>
+          <td>90 Кб</td>
+        </tr>
+        <tr>
+          <th scope="row">Квадрат</th>
+          <td>82 Кб</td>
+        </tr>
+        </tbody>
+      </table>
+    </p>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Делаем через CSS</h2>
+    <ul>
+      <li>Треугольнички</li>
+      <li>Крестики (&times;)</li>
+      <li>Кружочки</li>
+    </ul>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Оптимизация CSS</h2>
+    <pre class="next">
+      <code>.content-catalog-brand-name</code>
+      <code>.content-catalog-brand-logo</code>
+      <code>…</code>
+      <code>.c-c-b-name</code>
+      <code>.c-c-b-logo</code>
+    </pre>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Critical CSS</h2>
+    <pre class="next">
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <code>&lt;html&gt;</code>
+      <code>&lt;head&gt;</code>
+      <code>    &lt;title&gt;Site&lt;/title&gt;</code>
+      <code>    &lt;style&gt; <mark class="important">…</mark> &lt;style&gt;</code>
+      <code>&lt;/head&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>14 KB</h2>
+  </div></section>
+
+  <section class="slide"><div>
+    <h2>Keith Clark (30.03.2015)</h2>
+    <pre class="next">
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <code>&lt;html&gt;</code>
+      <code>&lt;head&gt;</code>
+      <code>&lt;link … <mark>media="none" onload="if(media!='all')media='all'"</mark> &gt;</code>
+      <code>&lt;/head&gt;</code>
+    </pre>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>Управляйте загрузкой сами</h2>
+  </div></section>
+
+  <section class="slide shout"><div>
+    <h2>Готовьте front-end отдельно</h2>
+  </div></section>
+
+	<section class="slide"><div>
+    <h2>Your site need for speed</h2>
+    <p>Дмитрий Вислов, wikimart.ru</p>
+    <ul>
+      <li><a href="http://vdv73.ru/pres/nastachku2015">http://vdv73.ru/pres/nastachku2015</a></li>
+      <li></li>
+      <li><a href="http://twitter.com/vdv73rus">twitter.com/vdv73rus</a></li>
+      <li><a href="mailto:vdv73rus@gmail.com">vdv73rus@gmail.com</a></li>
+    </ul>
+  </div></section>
+
+	<!--section class="slide cover" id="Cover"><div>
+		<h2>Shower Presentation Engine</h2>
+		<img src="pictures/cover.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Shower key features</h2>
+		<ol>
+			<li>Built on HTML, CSS and vanilla JavaScript</li>
+			<li>All modern browsers are supported</li>
+			<li>Slide themes are separated from engine</li>
+			<li>Fully keyboard accessible</li>
+			<li>Printable to PDF</li>
+		</ol>
+		<p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Plain text on your slides</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>All kind of lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ul>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious Citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code Samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>Pictures</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can even shout this way</h2>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner Navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</div></section>
+	<section class="slide" data-timing="00:05"><div>
+		<h2>Slide with timer</h2>
+		<p>It will change right in five seconds</p>
+		<footer>
+			Presenter note for the first slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Heading</h2>
+		<p>In your slides text you can use <a href="http://google.com/">links</a> and various inline elements for <em>emotional</em> and <strong>strong</strong> emphasis or just for <i>italic</i> or <b>bold</b> decoration. <code>&lt;code&gt;</code> is used for inline code samples.</p>
+		<footer>
+			Presenter note for the second slide
+		</footer>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Two rows.<br> Mighty heading</h2>
+		<p>You can use two lines header but it would reduce space on a slide. The “Ribbon” theme is designed for seven lines of code after one-line header by default.</p>
+		<p class="note">This paragraph could be used as a footnote</p>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Various lists</h2>
+		<ul>
+			<li>Simple lists are marked with bullets.</li>
+			<li>Ordered lists begin with a number.</li>
+			<li>You can even nest lists one inside another.
+				<ol>
+					<li>Or mix their types.</li>
+					<li>But do not go too far.</li>
+					<li>Otherwise audience will be bored.</li>
+				</ol>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Serious citation</h2>
+		<figure>
+			<blockquote>
+				<p>You can wrap one or more paragraphs into citation, which will make text italic and add a nice quote on the left. Giving the citation source would make it even more serious.</p>
+			</blockquote>
+			<figcaption>Vadim Makeev</figcaption>
+		</figure>
+	</div></section>
+	<section class="slide"><div>
+		<h2>When you have a lot of code</h2>
+		<pre>
+			<code>&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <mark class="comment">&lt;!--Comment--&gt;</mark></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="s/screen.css"&gt;</code>
+			<code>    &lt;script src="j/jquery.js"&gt;&lt;/script&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Code in separate blocks</h2>
+		<pre>
+			<code><mark>&lt;html</mark> lang="en"&gt;</code>
+		</pre>
+		<p class="note">Now you can add a note for each block</p>
+		<pre>
+			<code><mark>&lt;meta</mark> charset="<mark>UTF-8</mark>"&gt;</code>
+		</pre>
+		<p class="note">And explain what is interesting about it</p>
+	</div></section>
+	<section class="slide shout"><div>
+		<h2>You can shout<br> this way</h2>
+	</div></section>
+	<section class="slide cover" id="Picture"><div>
+		<h2>And place any picture</h2>
+		<img src="pictures/picture.jpg" alt="">
+	</div></section>
+	<section class="slide"><div>
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you change objects one by one</li>
+			<li class="next">For example, show list items</li>
+			<li class="next">Or switch pictures</li>
+			<li class="next">And much more</li>
+			<li class="next">But it will work only once</li>
+		</ol>
+	</div></section> -->
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="../shower/shower.min.js"></script>
+	<!-- Copyright © 2010–2013 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
