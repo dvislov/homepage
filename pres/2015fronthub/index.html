@@ -5,9 +5,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=680, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../bower_components/shower-bright/styles/screen.css">
 
 	<style>
+		img {
+			max-width: 100%;
+		}
 		.fontsquirrel {
 			background: url(./images/fontsquirrel-logo.png) center center no-repeat #61456a;
 		}
@@ -29,8 +33,339 @@
     </div>
   </section>
 
+	<section class="slide shout">
+		<div>
+			<h2>
+				<b><span style='color: blue;'>G</span><span style='color: red;'>o</span><span style='color: yellow;'>o</span><span style='color: blue;'>g</span><span style='color: green;'>l</span><span style='color: red;'>e</span></b>
+				Fonts
+			</h2>
+		</div>
+	</section>
+
 	<section class="slide fontsquirrel">
 		<div>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="images/license.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="images/chinese.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<img src="http://hsto.org/getpro/habr/comment_images/ebc/99c/9a7/ebc99c9a799283390f907392c8659bb5.png" width='100%' alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Форматы файлов</h2>
+			<ul>
+				<li><b>EOT</b> — Microsoft, IE</li>
+				<li class="next"><b>TTF</b> — Apple, 1980-e</li>
+				<li class="next"><b>WOFF</b> — 2009</li>
+				<li class="next"><b>WOFF2</b></li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide cover">
+		<div>
+			<img src="images/woff.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide cover">
+		<div>
+			<img src="images/woff2.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>1/3</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+				<h2>Актуально на сегодня</h2>
+				<pre>
+					<code>@font-face {</code>
+					<code>	font-family: MyFont</code>
+					<code>	src: local(MyFont),</code>
+					<code>	     url(<mark>file.woff2</mark>) format("woff2"),</code>
+					<code>	     url(<mark>file.woff</mark>)  format("woff");</code>
+					<code>}</code>
+				</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+				<pre>
+					<code>@font-face {</code>
+					<code>	src: url(<mark>file-bold.woff2</mark>) format("woff2");</code>
+					<code>	font-weight: bold;</code>
+					<code>}</code>
+				</pre>
+				<pre>
+					<code>@font-face {</code>
+					<code>	src: url(<mark>file-italic.woff2</mark>) format("woff2");</code>
+					<code>	font-style: italic;</code>
+					<code>}</code>
+				</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>На заметку</h2>
+			<p>Шрифт скачивается ТОЛЬКО ТОГДА, <br>когда используется в CSS-селекторе,<br>заматченном на DOM-элемент</p>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Основная проблема</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>FOUT & FOIT</h2>
+			<img src="images/foit.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Do not use<br>web fonts</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>GZIP (TTF + EOT)</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>Cache</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>HTTP2<br>Server Push</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><i class="fa fa-thumbs-o-down"></i> base64</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Шрифт == набор глифов</h2>
+			<p>Глиф — векторная форма каждой буквы или символа</p>
+			<img src="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/images/glyphs.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Размер файла зависит от:</h2>
+			<ul>
+				<li>количества глифов в шрифте</li>
+				<li class="next">сложности векторных контуров</li>
+				<li class="next">Шрифт <a href="https://www.google.com/get/noto/" target="_blank">Noto</a> с поддержкой всех языков мира — 130 МБ</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide cover">
+		<div>
+			<img src="images/subsetting.png" alt="">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+				<pre>
+					<code>@font-face {</code>
+					<code>	src: url(<mark>latin.woff2</mark>) format("woff2")</code>
+					<code>	unicode-range: <mark class="important">U+000-5FF</mark>; <mark class="comment">/* Latin glyphs */</mark></code>
+					<code>}</code>
+				</pre>
+
+				<pre>
+					<code>@font-face {</code>
+					<code>	src: url(<mark>japan.woff2</mark>) format("woff2")</code>
+					<code>	unicode-range: <mark class="important">U+3000-9FFF, U+ff??</mark>; <mark class="comment">/* Japan glyphs */</mark></code>
+					<code>}</code>
+				</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Хинтинг</h2>
+			<img src='https://upload.wikimedia.org/wikipedia/commons/0/05/Font-hinting-example.png' width='' alt=''>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Кернинг</h2>
+			<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Kerning.svg/500px-Kerning.svg.png' width='' alt=''>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Local Storage</h2>
+			<pre>
+				<code>if (localStorage.fonts) {</code>
+				<code>	insertFontStylesheet()</code>
+				<code>} else {</code>
+				<code>	downloadFonts();</code>
+				<code>	putFontsToLocalStorage();</code>
+				<code>	insertFontStylesheet();</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><a href="https://github.com/bramstein/fontfaceobserver" target="_blank">FontFaceObserver</a></h2>
+			<pre>
+				<code>var fontOneLoad = new FontFaceObserver(<mark>'MyFont'</mark>, {});</code>
+				<code>	</code>
+				<code>fontOneLoad.check().then(function () {</code>
+				<code>	document.documentElement.className += "<mark class="important"> fontOneLoaded</mark>";</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><a href="https://github.com/bramstein/fontfaceobserver" target="_blank">FontFaceObserver</a></h2>
+			<pre>
+				<code>body {font-family: sans-serif;}</code>
+				<code>	</code>
+ 				<code><mark>.fontOneLoad</mark> body {</code>
+    		<code>	font-family: 'MyFont', cursive;</code>
+ 				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Font Fallback</h2>
+			<pre>
+				<code>body {</code>
+				<code>	font: 18px/28px <mark>'Open Sans',Arial,sans-serif</mark>;</code>
+				<code>}</code>
+			</pre>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><a href="http://fontfamily.io/">fontfamily.io</a></h2>
+			<img src="images/fontfamilyio.png" alt="" width="100%">
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2><a href="http://ffffallback.com/">FFFFALLBACK</a></h2>
+			<img src="images/fallback.png" alt="" height="400">
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="https://developers.google.com/fonts/docs/webfont_loader" target="_blank">Web Font Loader</a></h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Будущее</h2>
+			<ul>
+				<li class="next">
+						<code>&lt;link rel="preload" name="font.woff2" as="font" /&gt;</code>
+				</li>
+				<li class="next">
+						<code>CSS font load­ing API</code>
+				</li>
+				<li class="next">
+						<code>font-display: auto | block | swap | fallback | optional;</code>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2>
+				<i class="fa fa-html5"></i>
+				<i class="fa fa-opera"></i>
+				<i class="fa fa-internet-explorer"></i>
+				<i class="fa fa-firefox"></i>
+				<i class="fa fa-css3"></i>
+				<i class="fa fa-chrome"></i>
+			</h2>
+		</div>
+	</section>
+
+	<section class="slide">
+		<div>
+			<h2>Плохо</h2>
+			<ul>
+				<li class="next">Семантика <code>&lt;i class="…" /&gt;</code></li>
+				<li class="next">Заняты <code>:before, :after</code></li>
+				<li class="next">▢▢▢▢▢▢</li>
+				<li class="next">Позиционирование</li>
+				<li class="next">Многоцветность / анимация</li>
+				<li class="next">Шрифт это шрифт, а иконочный — хак</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><i class="fa fa-cogs"></i> Tools</h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="https://github.com/bramstein/homebrew-webfonttools" target="_blank">
+				homebrew-webfonttools</a></h2>
+		</div>
+	</section>
+
+	<section class="slide shout">
+		<div>
+			<h2><a href="https://github.com/jonathantneal/postcss-font-magician" target="_blank">
+				postcss-font-magician</a></h2>
 		</div>
 	</section>
 
