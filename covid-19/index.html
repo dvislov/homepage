@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <title>COVID-19 Dashboard for Ulyanovsk region</title>
+</head>
+<body>
+
+<div class="root">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+      <div class="title">Статистика по ситуации с COVID-19<br />в Ульяновской области</div>
+      <div class="date">по состоянию на <mark id="current-date"></mark></div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone"></div>
+    <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
+      <div class="info">
+        <div class="info-label">По данным сайта</div>
+        <a href="https://xn--80aesfpebagmfblc0a.xn--p1ai/" target="_blank">
+          <img class="info-logo" itemprop="logo" src="https://dalee.cdnvideo.ru/stopcoronavirus.rf/img/logo.svg" alt="Официальная информация о коронавирусе в России на портале – стопкоронавирус.рф" />
+        </a>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+      <h2 id="sick-count">-</h2>
+      <h6>Число выявленных случаев</h6>
+      <canvas id="sick-chart" width="300" height="150" aria-label="Число выявленных случаев" role="img"></canvas>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+      <h2 id="active-count">-</h2>
+      <h6>Число активных случаев</h6>
+      <canvas id="in-progress-chart" width="300" height="150" aria-label="Число активных случаев" role="img"></canvas>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+      <h2 id="healed-count">-</h2>
+      <h6>Выздоровело</h6>
+      <canvas id="healed-chart" width="300" height="150" aria-label="Количество выздоровевших" role="img"></canvas>
+    </div>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+      <h2 id="died-count">-</h2>
+      <h6>Умерло</h6>
+      <canvas id="died-chart" width="300" height="150" aria-label="Количество умерших" role="img"></canvas>
+    </div>
+  </div>
+
+  <div class="rt">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone">
+        <h1 class="rt__title">Rt = <span id="rt">0.00</span></h1>
+        <h6>Коэффициент распространения</h6>
+        <p class="rt__description">Rt = число зарегистрированных больных за последние четыре дня, делённое на число зарегистрированных больных за предыдущие четыре дня.</p>
+        <p class="rt__description">Показатель коэффициента является одним из оснований для поэтапного снятия ограничений.</p>
+        <p class="rt__description rt__description--small"><a target="_blank" href="http://www.consultant.ru/document/cons_doc_LAW_352125/">"МР 3.1.0178-20. 3.1. Профилактика инфекционных болезней. Методические рекомендации. Определение комплекса мероприятий, а также показателей, являющихся основанием для поэтапного снятия ограничительных мероприятий в условиях эпидемического распространения COVID-19" (утв. Главным государственным санитарным врачом РФ 08.05.2020)</a></p>
+      </div>
+      <div class="mdl-cell mdl-cell--1-offset mdl-cell--8-col mdl-cell--12-col-phone">
+        <div class="rt__chart">
+          <canvas id="rt-chart" width="300" height="110" aria-label="Коэффициент распространения" role="img"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-phone">
+      <h4>Абсолютная динамика прироста (случаев)</h4>
+      <canvas id="absolute-chart" width="300" height="150" aria-label="Абсолютная динамика прироста (случаев)" role="img"></canvas>
+    </div>
+    <div class="mdl-cell mdl-cell--2-offset mdl-cell--5-col mdl-cell--12-col-phone">
+      <h4>Сводная диаграмма</h4>
+      <canvas id="common-chart" width="300" height="150" aria-label="Сводная диаграмма" role="img"></canvas>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
+        © 2020, dvislov.ru
+      </div>
+      <div class="mdl-cell mdl-cell--10-col mdl-cell--12-col-phone">
+        <a href="https://t.me/dvislov" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/locale/ru.min.js"></script>
+<script src="charts.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter4589113 = new Ya.Metrika({id:4589113,
+                    webvisor:true,
+                    clickmap:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/4589113" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38046997-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
