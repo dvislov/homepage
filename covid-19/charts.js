@@ -48,7 +48,7 @@ function drawCharts(data) {
 
   drawAbsoluteChart(dailySick, labels);
 
-  drawCommonChart(sickData, healedData, diedData, labels);
+  drawCommonChart(sickData, healedData, diedData, inProgressData, labels);
 };
 
 function drawSickChart(data, labels) {
@@ -350,7 +350,7 @@ function drawAbsoluteChart(dailySick, labels) {
   });
 }
 
-function drawCommonChart(sickData, healedData, diedData, labels) {
+function drawCommonChart(sickData, healedData, diedData, activeData, labels) {
   var ctx = document.getElementById('common-chart').getContext('2d');
 
   var commonChart = new Chart(ctx, {
@@ -358,14 +358,17 @@ function drawCommonChart(sickData, healedData, diedData, labels) {
     data: {
       labels,
       datasets: [{
+        label: 'Всего',
         data: sickData,
-        backgroundColor: 'transparent',
+        backgroundColor: '#3E52B5',
         borderColor: '#3E52B5',
         pointBackgroundColor: '#fff',
         pointBorderWidth: 0,
         pointRadius: 0,
+        fill: false,
         order: 1,
       }, {
+        label: 'Выздоровело',
         data: healedData,
         type: 'line',
         borderColor: '#47B04B',
@@ -373,9 +376,11 @@ function drawCommonChart(sickData, healedData, diedData, labels) {
         pointBorderWidth: 0,
         pointBackgroundColor: '#fff',
         pointRadius: 0,
-        backgroundColor: 'transparent',
+        backgroundColor: '#47B04B',
+        fill: false,
         order: 2,
       }, {
+        label: 'Умерло',
         data: diedData,
         type: 'line',
         borderColor: '#FF5708',
@@ -383,8 +388,21 @@ function drawCommonChart(sickData, healedData, diedData, labels) {
         pointBorderWidth: 0,
         pointBackgroundColor: '#fff',
         pointRadius: 0,
-        backgroundColor: 'transparent',
-        order: 2,
+        backgroundColor: '#FF5708',
+        fill: false,
+        order: 3,
+      }, {
+        label: 'Активные',
+        data: activeData,
+        type: 'line',
+        borderColor: '#FF9A01',
+        pointBorderColor: '#FF9A01',
+        pointBorderWidth: 0,
+        pointBackgroundColor: '#fff',
+        pointRadius: 0,
+        fill: false,
+        backgroundColor: '#FF9A01',
+        order: 4,
       }]
     },
     options: {
@@ -397,7 +415,12 @@ function drawCommonChart(sickData, healedData, diedData, labels) {
         enabled: true,
       },
       legend: {
-        display: false,
+        display: true,
+        position: 'bottom',
+        labels: {
+          boxWidth: 12,
+          padding: 20,
+        }
       },
       scales: {
         xAxes: [{
