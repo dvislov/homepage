@@ -12,7 +12,7 @@ function getDeltaMarkup(delta) {
 
 function getAbsoluteColor(allValues, value) {
   var colors = ['#FDC101', '#FFC200', '#FFA102', '#F77C00', '#7A5448', '#5E4036'];
-  var max = R.max(...allValues);
+  var max = Math.max(...allValues);
   var colorStep = max / colors.length;
 
   return colors[Math.round(value / colorStep) - 1];
