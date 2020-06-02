@@ -268,9 +268,9 @@ function drawRtChart(dailySick, labels) {
         backgroundColor: 'transparent',
         borderColor: '#9D27B0',
         pointBorderColor: '#9D27B0',
-        pointBorderWidth: 2,
+        pointBorderWidth: 1,
         pointBackgroundColor: '#fff',
-        pointRadius: 4,
+        pointRadius: 2,
       }]
     },
     options: {
@@ -314,7 +314,7 @@ function drawAbsoluteChart(dailySick, labels) {
       datasets: [{
         data: R.reverse(dailySick),
         backgroundColor: R.reverse(dailySick).map(daily => getAbsoluteColor(dailySick, daily)),
-        categoryPercentage: 0.4,
+        categoryPercentage: 0.5,
         barPercentage: 1,
       }]
     },
