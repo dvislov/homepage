@@ -27,9 +27,9 @@ function drawCharts(data) {
   var diedData = R.pluck('died')(data);
   var inProgressData = data.map(({ sick, died, healed }) => sick - died - healed);
 
-  var labels = R.pluck('date')(data).map(date => moment(date, "DD.MM.YYYY").format("D MMMM"));
+  var labels = R.pluck('date')(data).map(date => dayjs(date, "DD.MM.YYYY").format("D MMMM"));
 
-  var currentDate = moment(R.last(R.pluck('date')(data)), "DD.MM.YYYY");
+  var currentDate = dayjs(R.last(R.pluck('date')(data)), "DD.MM.YYYY");
   document.getElementById('current-date').innerText = `${currentDate.format("D MMMM")}`;
 
   var dailySick = reversedData.reduce(
