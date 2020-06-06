@@ -15,7 +15,9 @@ function getAbsoluteColor(allValues, value) {
   var max = Math.max(...allValues);
   var colorStep = max / colors.length;
 
-  return colors[Math.round(value / colorStep) - 1];
+  const index = Math.trunc(value / colorStep);
+
+  return index === colors.length ? colors[index - 1] : colors[index];
 }
 
 function drawCharts(data) {
