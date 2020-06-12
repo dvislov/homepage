@@ -4,7 +4,7 @@ fetch('data.json')
 
 function getDeltaMarkup(delta) {
   if (delta === 0) {
-    return '';
+    return '<sup></sup>';
   }
   var deltaSign = delta < 0 ? '-' : '+';
   return `<sup>${deltaSign}${delta}</sup>`;
