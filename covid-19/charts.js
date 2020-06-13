@@ -242,7 +242,7 @@ function drawDiedChart(data, labels) {
 function drawRtChart(dailySick, labels) {
   var sickByFourDays = dailySick.reduce(
     (acc, dailySickItem, index) => {
-      if (index < dailySick.length - 4) {
+      if (index < dailySick.length - 3) {
         return [...acc, dailySickItem + dailySick[index + 1] + dailySick[index + 2] + dailySick[index + 3]];
       } else {
         return acc;
@@ -261,7 +261,7 @@ function drawRtChart(dailySick, labels) {
   document.getElementById('rt').innerText = (rts[0]).toFixed(2);
   var ctx = document.getElementById('rt-chart').getContext('2d');
 
-  const printableLabels = labels.slice(8, labels.length - 1);
+  const printableLabels = labels.slice(8, labels.length);
 
   var rtChart = new Chart(ctx, {
     type: 'line',
