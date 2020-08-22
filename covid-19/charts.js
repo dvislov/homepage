@@ -272,9 +272,9 @@ function drawRtChart(dailySick, labels) {
         backgroundColor: 'transparent',
         borderColor: '#9D27B0',
         pointBorderColor: '#9D27B0',
-        pointBorderWidth: 1,
+        pointBorderWidth: 0,
         pointBackgroundColor: '#fff',
-        pointRadius: 2,
+        pointRadius: 0,
       }]
     },
     options: {
