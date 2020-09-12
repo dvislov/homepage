@@ -278,24 +278,20 @@ function drawRtChart(dailySick, labels) {
       }]
     },
     options: {
-      plugins: {
-        datalabels: {
-          display: 'auto',
-          align: 'start',
-          offset: -30,
-        }
-      },
       legend: {
         display: false,
       },
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 6,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{
@@ -320,7 +316,7 @@ function drawAbsoluteChart(dailySick, labels) {
       datasets: [{
         data: [...dailySick].reverse(),
         backgroundColor: [...dailySick].reverse().map(daily => getAbsoluteColor(dailySick, daily)),
-        categoryPercentage: 0.5,
+        categoryPercentage: 0.8,
         barPercentage: 1,
       }]
     },
@@ -339,11 +335,14 @@ function drawAbsoluteChart(dailySick, labels) {
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 4,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{
@@ -431,11 +430,14 @@ function drawCommonChart(sickData, healedData, diedData, activeData, labels) {
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 4,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{
