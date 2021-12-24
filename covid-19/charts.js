@@ -4,7 +4,7 @@ fetch('data.json')
 
 function getDeltaMarkup(delta) {
   if (delta === 0) {
-    return '';
+    return '<sup></sup>';
   }
   var deltaSign = delta < 0 ? '-' : '+';
   return `<sup>${deltaSign}${delta}</sup>`;
@@ -15,19 +15,21 @@ function getAbsoluteColor(allValues, value) {
   var max = Math.max(...allValues);
   var colorStep = max / colors.length;
 
-  return colors[Math.round(value / colorStep) - 1];
+  const index = Math.trunc(value / colorStep);
+
+  return index === colors.length ? colors[index - 1] : colors[index];
 }
 
 function drawCharts(data) {
-  var reversedData = R.reverse(data);
-  var sickData = R.pluck('sick')(data);
-  var healedData = R.pluck('healed')(data);
-  var diedData = R.pluck('died')(data);
+  const reversedData = [...data].reverse();
+  var sickData = data.map(({ sick }) => sick);
+  var healedData = data.map(({ healed }) => healed);
+  var diedData = data.map(({ died }) => died);
   var inProgressData = data.map(({ sick, died, healed }) => sick - died - healed);
 
-  var labels = R.pluck('date')(data).map(date => moment(date, "DD.MM.YYYY").format("D MMMM"));
+  var labels = data.map(({ date }) => date).map(date => dayjs(date, "DD.MM.YYYY").format("D MMMM"));
 
-  var currentDate = moment(R.last(R.pluck('date')(data)), "DD.MM.YYYY");
+  var currentDate = dayjs([...data].map(({ date }) => date).reverse()[0], "DD.MM.YYYY");
   document.getElementById('current-date').innerText = `${currentDate.format("D MMMM")}`;
 
   var dailySick = reversedData.reduce(
@@ -54,7 +56,7 @@ function drawCharts(data) {
 function drawSickChart(data, labels) {
   var ctx = document.getElementById('sick-chart').getContext('2d');
   var [count, ...tail] = [...data].reverse();
-  var delta = count - R.head(tail);
+  var delta = count - tail[0];
 
   document.getElementById('sick-count').innerHTML = `${count} ${getDeltaMarkup(delta)}`;
 
@@ -102,7 +104,7 @@ function drawInProgressChart(data, labels) {
   var ctx = document.getElementById('in-progress-chart').getContext('2d');
   var [count, ...tail] = [...data].reverse();
 
-  document.getElementById('active-count').innerHTML = `${count}`;
+  document.getElementById('active-count').innerHTML = `${count} <sup>&nbsp;</sup>`;
 
   var myChart = new Chart(ctx, {
     type: 'bar',
@@ -147,7 +149,7 @@ function drawInProgressChart(data, labels) {
 function drawHealedChart(data, labels) {
   var ctx = document.getElementById('healed-chart').getContext('2d');
   var [count, ...tail] = [...data].reverse();
-  var delta = count - R.head(tail);
+  var delta = count - tail[0];
 
   document.getElementById('healed-count').innerHTML = `${count} ${getDeltaMarkup(delta)}`;
 
@@ -194,7 +196,7 @@ function drawHealedChart(data, labels) {
 function drawDiedChart(data, labels) {
   var ctx = document.getElementById('died-chart').getContext('2d');
   var [count, ...tail] = [...data].reverse();
-  var delta = count - R.head(tail);
+  var delta = count - tail[0];
 
   document.getElementById('died-count').innerHTML = `${count} ${getDeltaMarkup(delta)}`;
   var myChart = new Chart(ctx, {
@@ -240,7 +242,7 @@ function drawDiedChart(data, labels) {
 function drawRtChart(dailySick, labels) {
   var sickByFourDays = dailySick.reduce(
     (acc, dailySickItem, index) => {
-      if (index < dailySick.length - 4) {
+      if (index < dailySick.length - 3) {
         return [...acc, dailySickItem + dailySick[index + 1] + dailySick[index + 2] + dailySick[index + 3]];
       } else {
         return acc;
@@ -256,42 +258,40 @@ function drawRtChart(dailySick, labels) {
       }
     }, []);
 
-  document.getElementById('rt').innerText = R.head(rts).toFixed(2);
+  document.getElementById('rt').innerText = (rts[0]).toFixed(2);
   var ctx = document.getElementById('rt-chart').getContext('2d');
+
+  const printableLabels = labels.slice(8, labels.length);
 
   var rtChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: R.takeLast(labels.length - 9, labels),
+      labels: printableLabels,
       datasets: [{
-        data: R.reverse(rts).map(rt => rt.toFixed(2)),
+        data: [...rts].reverse().map(rt => rt.toFixed(2)),
         backgroundColor: 'transparent',
         borderColor: '#9D27B0',
         pointBorderColor: '#9D27B0',
-        pointBorderWidth: 2,
+        pointBorderWidth: 0,
         pointBackgroundColor: '#fff',
-        pointRadius: 4,
+        pointRadius: 0,
       }]
     },
     options: {
-      plugins: {
-        datalabels: {
-          display: 'auto',
-          align: 'start',
-          offset: -30,
-        }
-      },
       legend: {
         display: false,
       },
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 6,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{
@@ -307,14 +307,16 @@ function drawRtChart(dailySick, labels) {
 function drawAbsoluteChart(dailySick, labels) {
   var ctx = document.getElementById('absolute-chart').getContext('2d');
 
+  const [head, ...lastLabels] = labels;
+
   var absoluteChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: R.takeLast(labels.length - 1, labels),
+      labels: lastLabels,
       datasets: [{
-        data: R.reverse(dailySick),
-        backgroundColor: R.reverse(dailySick).map(daily => getAbsoluteColor(dailySick, daily)),
-        categoryPercentage: 0.4,
+        data: [...dailySick].reverse(),
+        backgroundColor: [...dailySick].reverse().map(daily => getAbsoluteColor(dailySick, daily)),
+        categoryPercentage: 0.8,
         barPercentage: 1,
       }]
     },
@@ -333,11 +335,14 @@ function drawAbsoluteChart(dailySick, labels) {
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 4,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{
@@ -425,11 +430,14 @@ function drawCommonChart(sickData, healedData, diedData, activeData, labels) {
       scales: {
         xAxes: [{
           gridLines: {
-            display: false,
+            display: true,
           },
           ticks: {
-            maxTicksLimit: 4,
             maxRotation: 0,
+            callback: function(value, index, values) {
+              return (value[0] === '1' && value[1] === ' ') ? value : null;
+            },
+            autoSkip: false,
           }
         }],
         yAxes: [{

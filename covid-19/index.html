@@ -10,9 +10,7 @@
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="465" />
   <meta property="og:image:height" content="224" />
-  <link type="text/css" rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
-  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+  <meta name="description" content="Статистика по ситуации с COVID-19 в Ульяновской области">
   <link type="text/css" rel="stylesheet" href="style.css">
   <title>COVID-19 Dashboard for Ulyanovsk region</title>
 </head>
@@ -28,7 +26,7 @@
     <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone">
       <div class="info">
         <div class="info-label">По данным сайта</div>
-        <a href="https://xn--80aesfpebagmfblc0a.xn--p1ai/" target="_blank">
+        <a href="https://xn--80aesfpebagmfblc0a.xn--p1ai/" target="_blank" rel="noopener" rel="noreferrer">
           <img class="info-logo" itemprop="logo" src="https://dalee.cdnvideo.ru/stopcoronavirus.rf/img/logo.svg" alt="Официальная информация о коронавирусе в России на портале – стопкоронавирус.рф" />
         </a>
       </div>
@@ -66,7 +64,7 @@
         <h6>Коэффициент распространения</h6>
         <p class="rt__description">Rt = число зарегистрированных больных за последние четыре дня, делённое на число зарегистрированных больных за предыдущие четыре дня.</p>
         <p class="rt__description">Показатель коэффициента является одним из оснований для поэтапного снятия ограничений.</p>
-        <p class="rt__description rt__description--small"><a target="_blank" href="https://www.consultant.ru/document/cons_doc_LAW_352125/">"МР 3.1.0178-20. 3.1. Профилактика инфекционных болезней. Методические рекомендации. Определение комплекса мероприятий, а также показателей, являющихся основанием для поэтапного снятия ограничительных мероприятий в условиях эпидемического распространения COVID-19" (утв. Главным государственным санитарным врачом РФ 08.05.2020)</a></p>
+        <p class="rt__description rt__description--small"><a target="_blank" rel="noopener" rel="noreferrer" href="https://www.consultant.ru/document/cons_doc_LAW_352125/">"МР 3.1.0178-20. 3.1. Профилактика инфекционных болезней. Методические рекомендации. Определение комплекса мероприятий, а также показателей, являющихся основанием для поэтапного снятия ограничительных мероприятий в условиях эпидемического распространения COVID-19" (утв. Главным государственным санитарным врачом РФ 08.05.2020)</a></p>
       </div>
       <div class="mdi-cell mdl-cell--1-col mdl-cell--hide-phone"></div>
       <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-phone">
@@ -78,14 +76,15 @@
   </div>
 
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-phone">
+    <div class="mdl-cell mdl-cell--12-col">
       <h4>Абсолютная динамика прироста (случаев)</h4>
-      <canvas id="absolute-chart" width="300" height="150" aria-label="Абсолютная динамика прироста (случаев)" role="img"></canvas>
+      <canvas id="absolute-chart" width="1200" height="300" aria-label="Абсолютная динамика прироста (случаев)" role="img"></canvas>
     </div>
-    <div class="mdi-cell mdl-cell--2-col mdl-cell--hide-phone"></div>
-    <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-phone">
+  </div>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
       <h4>Сводная диаграмма</h4>
-      <canvas id="common-chart" width="300" height="165" aria-label="Сводная диаграмма" role="img"></canvas>
+      <canvas id="common-chart" width="300" height="125" aria-label="Сводная диаграмма" role="img"></canvas>
     </div>
   </div>
 
@@ -95,17 +94,18 @@
         © 2020, dvislov.ru
       </div>
       <div class="mdl-cell mdl-cell--10-col mdl-cell--12-col-phone">
-        <a href="https://t.me/dvislov" target="_blank">Telegram</a>
+        <a href="https://t.me/dvislov" target="_blank" rel="noopener" rel="noreferrer">Telegram</a>
       </div>
     </div>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.3/locale/ru.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/plugin/customParseFormat.js"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/locale/ru.js"></script>
+<script>dayjs.extend(window.dayjs_plugin_customParseFormat)</script>
+<script>dayjs.locale('ru')</script>
 <script src="charts.js"></script>
 
 <!-- Yandex.Metrika counter -->
